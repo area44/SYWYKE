@@ -18,7 +18,7 @@
     "@astrojs/react": "^4.4.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.14",
-    "astro": "^5.14.1",
+    "astro": "^5.14.3",
     "cal-sans": "^1.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
