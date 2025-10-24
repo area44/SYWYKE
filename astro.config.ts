@@ -7,8 +7,8 @@ const site = process.env.VERCEL
   ? process.env.VERCEL_ENV === "production"
     ? "https://sywyke.vercel.app"
     : `https://${process.env.VERCEL_URL}`
-  : (process.env.site ?? "http://localhost:4321");
-const base = process.env.base || "/";
+  : (process.env.SITE ?? "http://localhost:4321");
+const base = process.env.BASE || "/";
 
 export default defineConfig({
   site,
