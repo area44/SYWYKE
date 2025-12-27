@@ -21,13 +21,23 @@ const description = "Sites You Wish You Knew Earlier by AREA44";
 ---
 
 <Layout title={title} description={description}>
-  <Heading level={2}>Browse Sites by Tag</Heading>
+  <div class="flex flex-1 flex-col">
+    <section class="border-grid">
+      <div class="container-wrapper">
+        <div
+          class="container flex flex-col gap-2 py-8 md:py-16 lg:py-20 xl:gap-4"
+        >
+          <Heading level={2}>Browse Sites by Tag</Heading>
 
-  <TagFilterList tags={uniqueTags} />
+          <TagFilterList tags={uniqueTags} />
 
-  <Heading level={2}>{title}</Heading>
+          <Heading level={2}>{title}</Heading>
 
-  <SiteList sites={paginated} />
+          <SiteList sites={paginated} />
+        </div>
+      </div>
+    </section>
+  </div>
 
   <div class="mt-8 flex justify-center">
     <Paginator currentPage={page} totalPages={totalPages} />
