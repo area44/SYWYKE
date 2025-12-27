@@ -2,7 +2,7 @@
 
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 
-![SYWYKE banner](./public/og.png)
+![SYWYKE banner](./public/og-image.png)
 
 SYWYKE is an open-source project that aims to gather and showcase awesome websites on the internet. It provides a platform for users to discover and explore websites based on their interests and preferences.
 
