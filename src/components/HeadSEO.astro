@@ -23,17 +23,14 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Title & Description -->
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow" />
   <meta name="generator" content={Astro.generator} />
 
-  <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
 
-  <!-- Favicons -->
   <link
     rel="icon"
     href={new URL("favicon.ico", siteUrl).toString()}
@@ -59,30 +56,24 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
   <link rel="manifest" href={new URL("site.webmanifest", siteUrl).toString()} />
   <meta name="theme-color" content="#ffffff" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content={canonicalURL} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
 
-  <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
-  <!-- Pagefind -->
   <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
 
-  <!-- View Transitions -->
   <ClientRouter />
 
-  <!-- Fonts -->
   <Font cssVariable="--font-geist" preload />
 </head>
