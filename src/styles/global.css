@@ -5,8 +5,10 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant fixed (&:is(.layout-fixed *));
 
 @theme inline {
+  --breakpoint-3xl: 1600px;
   --font-sans: var(--font-geist);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -46,6 +48,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-surface: var(--surface);
 }
 
 :root {
@@ -81,6 +84,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --surface: oklch(0.98 0 0);
 }
 
 .dark {
@@ -115,6 +119,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --surface: oklch(0.2 0 0);
 }
 
 @layer base {
@@ -128,4 +133,12 @@
   html {
     @apply font-sans;
   }
+}
+
+@utility container-wrapper {
+  @apply 3xl:fixed:max-w-[calc(var(--breakpoint-2xl)+2rem)] mx-auto w-full px-2;
+}
+
+@utility container {
+  @apply 3xl:max-w-screen-2xl mx-auto max-w-350 px-4 lg:px-8;
 }

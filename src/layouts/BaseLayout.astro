@@ -1,30 +1,28 @@
 ---
-import Footer from "@/components/Footer.astro";
-import Header from "@/components/Header.astro";
-import HeadSEO from "@/components/HeadSEO.astro";
+import { cn } from "@/lib/utils";
 
-const { title, description } = Astro.props as {
-  title: string;
-  description: string;
-};
+import HeadSEO from "@/components/HeadSEO.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const { title, description, ogImage } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en" class="dark">
-  <HeadSEO title={title} description={description} />
+  <head>
+    <HeadSEO title={title} description={description} ogImage={ogImage} />
+  </head>
   <body
-    class="min-h-screen bg-background font-sans antialiased text-foreground"
+    class={cn(
+      "group/body overscroll-none antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)]",
+    )}
   >
-    <!-- Page Container -->
-    <div class="flex flex-col min-h-screen">
-      <!-- Header -->
+    <div class="bg-background relative z-10 flex min-h-svh flex-col">
       <Header />
-
-      <!-- Main content -->
-      <main class="grow w-full max-w-(--breakpoint-md) mx-auto px-4 py-10">
+      <main class="flex flex-1 flex-col">
         <slot />
       </main>
-
-      <!-- Footer -->
       <Footer />
     </div>
   </body>
