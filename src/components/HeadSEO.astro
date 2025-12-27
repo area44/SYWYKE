@@ -15,6 +15,7 @@ const {
 } = Astro.props;
 
 const siteUrl = Astro.site;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const ogImage = new URL("og-image.png", siteUrl).toString();
 ---
 
@@ -26,28 +27,48 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <meta name="generator" content={Astro.generator} />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href={Astro.url} />
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalURL} />
 
-  <!-- Favicon & Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Favicons -->
+  <link
+    rel="icon"
+    href={new URL("favicon.ico", siteUrl).toString()}
+    sizes="any"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href={new URL("favicon-16x16.png", siteUrl).toString()}
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href={new URL("favicon-32x32.png", siteUrl).toString()}
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href={new URL("apple-touch-icon.png", siteUrl).toString()}
+  />
+  <link rel="manifest" href={new URL("site.webmanifest", siteUrl).toString()} />
   <meta name="theme-color" content="#ffffff" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
+  <meta property="og:url" content={canonicalURL} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImage} />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content={Astro.url} />
+  <meta name="twitter:url" content={canonicalURL} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
@@ -55,16 +76,13 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
-  <!-- Generator -->
-  <meta name="generator" content={Astro.generator} />
-
-  <!-- Pagefind (search UI) -->
+  <!-- Pagefind -->
   <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
   <script is:inline src="/pagefind/pagefind-ui.js"></script>
 
   <!-- View Transitions -->
   <ClientRouter />
 
-  <!-- Font Preload (Geist via astro:assets) -->
+  <!-- Fonts -->
   <Font cssVariable="--font-geist" preload />
 </head>
