@@ -69,10 +69,18 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
 
-  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+  <link
+    rel="sitemap"
+    type="application/xml"
+    href={new URL("sitemap-index.xml", siteUrl).toString()}
+  />
 
-  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
-  <script is:inline src="/pagefind/pagefind-ui.js"></script>
+  <link
+    rel="stylesheet"
+    href={new URL("pagefind/pagefind-ui.css", siteUrl).toString()}
+  />
+  <script is:inline src={new URL("pagefind/pagefind-ui.js", siteUrl).toString()}
+  ></script>
 
   <ClientRouter />
 
