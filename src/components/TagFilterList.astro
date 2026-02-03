@@ -8,11 +8,9 @@ import { slugify } from "@/lib/siteUtils";
 <div class="flex flex-wrap gap-1 mb-4">
   {
     tags.map((tag: string) => (
-      <Badge key={tag}>
-        <a href={`/tag/${slugify(tag)}/`} title={`View sites tagged "${tag}"`}>
-          {tag}
-        </a>
-      </Badge>
+      <a href={`/tag/${slugify(tag)}/`} title={`View sites tagged "${tag}"`}>
+        <Badge key={tag}>{tag}</Badge>
+      </a>
     ))
   }
 </div>
