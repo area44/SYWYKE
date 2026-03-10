@@ -14,15 +14,13 @@ export default defineConfig({
   site,
   base,
   integrations: [react()],
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Geist",
-        cssVariable: "--font-geist",
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Geist",
+      cssVariable: "--font-geist",
+    },
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
