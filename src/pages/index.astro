@@ -1,45 +1,67 @@
 ---
-import Heading from "@/components/Heading.astro";
-import Paginator from "@/components/Paginator.astro";
-import SiteList from "@/components/SiteList.astro";
-import TagFilterList from "@/components/TagFilterList.astro";
-import Layout from "@/layouts/BaseLayout.astro";
-import { extractUniqueTags, getPaginatedSites, slugify } from "@/lib/siteUtils";
+import { DashboardMain } from "@/components/dashboard/main";
+import Layout from "@/layouts/DashboardLayout.astro";
+import { extractUniqueTags, getSortedSites } from "@/lib/siteUtils";
+import "@/styles/global.css";
 
-// Page setup
-const page = Number(Astro.url.searchParams.get("page") || 1);
-const perPage = 10;
+const allSites = await getSortedSites();
+const uniqueTagsStrings = extractUniqueTags(allSites);
 
-const { paginated, totalPages, allSites } = await getPaginatedSites(
-  page,
-  perPage
-);
-const uniqueTags = extractUniqueTags(allSites);
+const bookmarks = allSites.map((site) => ({
+  id: site.id,
+  title: site.data.title,
+  url: site.data.url,
+  description: site.data.description,
+  favicon: `https://www.google.com/s2/favicons?domain=${new URL(site.data.url).hostname}&sz=64`,
+  collectionId: "all",
+  tags: site.data.tags || [],
+  createdAt: new Date().toISOString(),
+  isFavorite: false,
+}));
+
+const tags = uniqueTagsStrings.map((tag) => ({
+  id: tag,
+  name: tag,
+  color: "bg-blue-500/10 text-blue-500",
+  count: allSites.filter((s) => s.data.tags?.includes(tag)).length,
+}));
+
+const collections = [
+  {
+    id: "all",
+    name: "All Sites",
+    icon: "bookmark",
+    color: "neutral",
+    count: bookmarks.length,
+  },
+  {
+    id: "design",
+    name: "Design",
+    icon: "palette",
+    color: "violet",
+    count: allSites.filter((s) => s.data.tags?.includes("design")).length,
+  },
+  {
+    id: "dev",
+    name: "Development",
+    icon: "code",
+    color: "blue",
+    count: allSites.filter(
+      (s) => s.data.tags?.includes("develop") || s.data.tags?.includes("dev")
+    ).length,
+  },
+];
+
+const initialData = {
+  bookmarks,
+  collections,
+  tags,
+};
 
 const title = "Sites You Wish You Knew Earlier!";
 const description = "Sites You Wish You Knew Earlier by AREA44";
 ---
 
 <Layout title={title} description={description}>
-  <div class="flex flex-1 flex-col">
-    <section class="border-grid">
-      <div class="container-wrapper">
-        <div
-          class="container flex flex-col gap-2 py-8 md:py-16 lg:py-20 xl:gap-4"
-        >
-          <Heading level={2}>Browse Sites by Tag</Heading>
-
-          <TagFilterList tags={uniqueTags} />
-
-          <Heading level={2}>{title}</Heading>
-
-          <SiteList sites={paginated} />
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="mt-8 flex justify-center">
-    <Paginator currentPage={page} totalPages={totalPages} />
-  </div>
+  <DashboardMain initialData={initialData} client:load />
 </Layout>
