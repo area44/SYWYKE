@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Globe, Search, Tag } from "lucide-react";
+import { Globe, Search, Tag } from "lucide-react";
 import * as React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
@@ -10,7 +10,6 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
@@ -19,15 +18,8 @@ import { useBookmarksStore } from "@/store/bookmarks-store";
 export function BookmarksSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
-  const [tagsOpen, setTagsOpen] = React.useState(true);
-  const {
-    selectedTags,
-    toggleTag,
-    clearTags,
-    tags,
-    searchQuery,
-    setSearchQuery,
-  } = useBookmarksStore();
+  const { selectedTags, toggleTag, tags, searchQuery, setSearchQuery } =
+    useBookmarksStore();
 
   return (
     <Sidebar collapsible="offcanvas" className="lg:border-r-0!" {...props}>
@@ -53,55 +45,26 @@ export function BookmarksSidebar({
           </div>
         </div>
         <SidebarGroup className="p-0">
-          <SidebarGroupLabel className="flex items-center gap-1.5 px-0 text-[10px] font-semibold tracking-wider text-muted-foreground">
-            <button
-              type="button"
-              onClick={() => setTagsOpen(!tagsOpen)}
-              className="flex items-center gap-1.5 cursor-pointer"
-            >
-              <ChevronDown
-                className={cn(
-                  "size-3.5 transition-transform",
-                  !tagsOpen && "-rotate-90"
-                )}
-              />
-              TAGS
-            </button>
-            {selectedTags.length > 0 && (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  clearTags();
-                }}
-                className="ml-auto text-[10px] text-muted-foreground hover:text-foreground"
-              >
-                Clear
-              </button>
-            )}
-          </SidebarGroupLabel>
-          {tagsOpen && (
-            <SidebarGroupContent>
-              <div className="flex flex-wrap gap-1.5 mt-2">
-                {tags.map((tag) => (
-                  <button
-                    type="button"
-                    key={tag.id}
-                    onClick={() => toggleTag(tag.id)}
-                    className={cn(
-                      "inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
-                      selectedTags.includes(tag.id)
-                        ? "bg-primary text-primary-foreground"
-                        : tag.color
-                    )}
-                  >
-                    <Tag className="size-3" />
-                    {tag.name}
-                  </button>
-                ))}
-              </div>
-            </SidebarGroupContent>
-          )}
+          <SidebarGroupContent>
+            <div className="flex flex-wrap gap-1.5 mt-2">
+              {tags.map((tag) => (
+                <button
+                  type="button"
+                  key={tag.id}
+                  onClick={() => toggleTag(tag.id)}
+                  className={cn(
+                    "inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
+                    selectedTags.includes(tag.id)
+                      ? "bg-primary text-primary-foreground"
+                      : tag.color
+                  )}
+                >
+                  <Tag className="size-3" />
+                  {tag.name}
+                </button>
+              ))}
+            </div>
+          </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="px-5 pb-5">
