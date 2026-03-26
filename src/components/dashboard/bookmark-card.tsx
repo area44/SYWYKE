@@ -202,6 +202,7 @@ export function BookmarkCard({
         </DropdownMenu>
       </div>
       <button
+        type="button"
         className="w-full text-left cursor-pointer"
         onClick={handleOpenUrl}
       >

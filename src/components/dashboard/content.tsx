@@ -70,6 +70,7 @@ export function BookmarksContent() {
                     {filterType === "with-tags" && "With tags"}
                     {filterType === "without-tags" && "Without tags"}
                     <button
+                      type="button"
                       onClick={() => setFilterType("all")}
                       className="hover:bg-primary/20 rounded-full p-0.5"
                     >
@@ -84,6 +85,7 @@ export function BookmarksContent() {
                   >
                     {tag.name}
                     <button
+                      type="button"
                       onClick={() => toggleTag(tag.id)}
                       className="hover:bg-primary-foreground/20 rounded-full p-0.5"
                     >

@@ -144,6 +144,7 @@ export function BookmarksSidebar({
         <SidebarGroup className="p-0">
           <SidebarGroupLabel className="flex items-center gap-1.5 px-0 text-[10px] font-semibold tracking-wider text-muted-foreground">
             <button
+              type="button"
               onClick={() => setCollectionsOpen(!collectionsOpen)}
               className="flex items-center gap-1.5 cursor-pointer"
             >
@@ -194,6 +195,7 @@ export function BookmarksSidebar({
         <SidebarGroup className="p-0">
           <SidebarGroupLabel className="flex items-center gap-1.5 px-0 text-[10px] font-semibold tracking-wider text-muted-foreground">
             <button
+              type="button"
               onClick={() => setTagsOpen(!tagsOpen)}
               className="flex items-center gap-1.5 cursor-pointer"
             >
@@ -207,6 +209,7 @@ export function BookmarksSidebar({
             </button>
             {selectedTags.length > 0 && (
               <button
+                type="button"
                 onClick={(e) => {
                   e.stopPropagation();
                   clearTags();
@@ -222,6 +225,7 @@ export function BookmarksSidebar({
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {tags.map((tag) => (
                   <button
+                    type="button"
                     key={tag.id}
                     onClick={() => toggleTag(tag.id)}
                     className={cn(
