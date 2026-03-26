@@ -64,4 +64,18 @@ const description = "Sites You Wish You Knew Earlier by AREA44";
 
 <Layout title={title} description={description}>
   <DashboardMain initialData={initialData} client:load />
+
+  {/* SEO and Search Indexing content */}
+  <div style="display: none;">
+    {allSites.map(site => (
+        <article>
+            <h2>{site.data.title}</h2>
+            <p>{site.data.description}</p>
+            <ul>
+                {site.data.tags?.map(tag => <li>{tag}</li>)}
+            </ul>
+            <a href={site.data.url}>{site.data.title}</a>
+        </article>
+    ))}
+  </div>
 </Layout>
