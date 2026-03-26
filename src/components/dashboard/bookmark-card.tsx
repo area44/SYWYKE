@@ -1,21 +1,11 @@
 "use client";
 
-import {
-  Archive,
-  Copy,
-  ExternalLink,
-  Heart,
-  MoreHorizontal,
-  Pencil,
-  Tag,
-  Trash2,
-} from "lucide-react";
+import { Copy, ExternalLink, MoreHorizontal, Pencil, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
@@ -30,12 +20,7 @@ export function BookmarkCard({
   bookmark,
   variant = "grid",
 }: BookmarkCardProps) {
-  const {
-    toggleFavorite,
-    archiveBookmark,
-    trashBookmark,
-    tags: allTags,
-  } = useBookmarksStore();
+  const { tags: allTags } = useBookmarksStore();
 
   const bookmarkTags = allTags.filter(
     (tag) => bookmark.tags.includes(tag.name) || bookmark.tags.includes(tag.id)
@@ -90,18 +75,6 @@ export function BookmarkCard({
           </p>
         </div>
         <div className="flex items-center gap-1">
-          <Button
-            variant="ghost"
-            size="icon-xs"
-            onClick={() => toggleFavorite(bookmark.id)}
-          >
-            <Heart
-              className={cn(
-                "size-4",
-                bookmark.isFavorite && "fill-red-500 text-red-500"
-              )}
-            />
-          </Button>
           <Button variant="ghost" size="icon-xs" onClick={handleOpenUrl}>
             <ExternalLink className="size-4" />
           </Button>
@@ -124,18 +97,6 @@ export function BookmarkCard({
                 <Tag className="size-4 mr-2" />
                 Add Tags
               </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => archiveBookmark(bookmark.id)}>
-                <Archive className="size-4 mr-2" />
-                Archive
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                className="text-destructive"
-                onClick={() => trashBookmark(bookmark.id)}
-              >
-                <Trash2 className="size-4 mr-2" />
-                Delete
-              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -146,19 +107,6 @@ export function BookmarkCard({
   return (
     <div className="group relative flex flex-col rounded-xl border bg-card overflow-hidden hover:bg-accent/30 transition-colors">
       <div className="absolute top-3 right-3 z-10 flex items-center gap-1">
-        <Button
-          variant="secondary"
-          size="icon-xs"
-          className="bg-background/80 backdrop-blur-sm"
-          onClick={() => toggleFavorite(bookmark.id)}
-        >
-          <Heart
-            className={cn(
-              "size-4",
-              bookmark.isFavorite && "fill-red-500 text-red-500"
-            )}
-          />
-        </Button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
@@ -185,18 +133,6 @@ export function BookmarkCard({
             <DropdownMenuItem>
               <Tag className="size-4 mr-2" />
               Add Tags
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => archiveBookmark(bookmark.id)}>
-              <Archive className="size-4 mr-2" />
-              Archive
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="text-destructive"
-              onClick={() => trashBookmark(bookmark.id)}
-            >
-              <Trash2 className="size-4 mr-2" />
-              Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

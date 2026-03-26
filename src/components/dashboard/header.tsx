@@ -38,7 +38,6 @@ const sortOptions = [
 
 const filterOptions = [
   { value: "all", label: "All Bookmarks" },
-  { value: "favorites", label: "Favorites Only" },
   { value: "with-tags", label: "With Tags" },
   { value: "without-tags", label: "Without Tags" },
 ] as const;

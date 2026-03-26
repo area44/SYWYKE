@@ -1,0 +1,40 @@
+
+> @area44/sywyke@25.12.27 dev
+> astro dev
+
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
+
+[vite] connected.
+18:33:12 [types] Generated 1ms
+[vite] connected.
+18:33:13 [content] Syncing content
+18:33:13 [content] Synced content
+ astro  v6.1.0 ready in 3414 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+18:33:13 watching for file changes...
+18:34:07 [200] / 267ms
+18:34:10 [vite] ✨ new dependencies optimized: astro/runtime/client/dev-toolbar/entrypoint.js, astro/virtual-modules/transitions-router.js, astro/virtual-modules/transitions-types.js, astro/virtual-modules/transitions-events.js, astro/virtual-modules/transitions-swap-functions.js
+18:34:10 [vite] ✨ optimized dependencies changed. reloading
+18:34:11 [404] /logo.png 23ms
+18:34:12 [200] / 50ms
+18:34:14 [404] /logo.png 2ms
+18:34:26 [200] / 13ms
+18:34:27 [404] /logo.png 1ms
+18:34:42 [200] / 23ms
+18:34:43 [404] /logo.png 2ms
+18:34:59 [200] / 16ms
+18:35:00 [404] /logo.png 2ms
+18:35:42 [200] / 22ms
+18:35:44 [404] /logo.png 2ms
+18:36:09 [200] / 16ms
+18:36:10 [404] /logo.png 1ms
+18:36:56 [200] / 14ms
+18:36:57 [404] /logo.png 1ms
+18:37:11 [200] / 25ms
+18:37:12 [404] /logo.png 1ms
+18:37:27 [200] / 14ms
+18:37:28 [404] /logo.png 1ms
