@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, ExternalLink, MoreHorizontal, Pencil, Tag } from "lucide-react";
+import { Copy, ExternalLink, MoreHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -89,14 +89,6 @@ export function BookmarkCard({
                 <Copy className="size-4 mr-2" />
                 Copy URL
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Pencil className="size-4 mr-2" />
-                Edit
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Tag className="size-4 mr-2" />
-                Add Tags
-              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -125,14 +117,6 @@ export function BookmarkCard({
             <DropdownMenuItem onClick={handleOpenUrl}>
               <ExternalLink className="size-4 mr-2" />
               Open in new tab
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Pencil className="size-4 mr-2" />
-              Edit
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Tag className="size-4 mr-2" />
-              Add Tags
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

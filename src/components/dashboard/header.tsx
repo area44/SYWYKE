@@ -1,24 +1,8 @@
 "use client";
 
-import {
-  ArrowUpDown,
-  Check,
-  LayoutGrid,
-  List,
-  Plus,
-  Search,
-  SlidersHorizontal,
-} from "lucide-react";
+import { LayoutGrid, List, Search } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
@@ -29,33 +13,9 @@ interface BookmarksHeaderProps {
   title?: string;
 }
 
-const sortOptions = [
-  { value: "date-newest", label: "Date Added (Newest)" },
-  { value: "date-oldest", label: "Date Added (Oldest)" },
-  { value: "alpha-az", label: "Alphabetical (A-Z)" },
-  { value: "alpha-za", label: "Alphabetical (Z-A)" },
-] as const;
-
-const filterOptions = [
-  { value: "all", label: "All Bookmarks" },
-  { value: "with-tags", label: "With Tags" },
-  { value: "without-tags", label: "Without Tags" },
-] as const;
-
 export function BookmarksHeader({ title = "Bookmarks" }: BookmarksHeaderProps) {
-  const {
-    viewMode,
-    setViewMode,
-    searchQuery,
-    setSearchQuery,
-    sortBy,
-    setSortBy,
-    filterType,
-    setFilterType,
-  } = useBookmarksStore();
-
-  const currentSort = sortOptions.find((opt) => opt.value === sortBy);
-  const currentFilter = filterOptions.find((opt) => opt.value === filterType);
+  const { viewMode, setViewMode, searchQuery, setSearchQuery } =
+    useBookmarksStore();
 
   return (
     <header className="w-full border-b">
@@ -95,81 +55,6 @@ export function BookmarksHeader({ title = "Bookmarks" }: BookmarksHeaderProps) {
               <List className="size-4" />
             </Button>
           </div>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="hidden sm:flex">
-                <ArrowUpDown className="size-4" />
-                <span className="hidden lg:inline">
-                  {currentSort?.label.split(" ")[0]}
-                </span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48">
-              <DropdownMenuLabel className="text-xs text-muted-foreground">
-                Sort by
-              </DropdownMenuLabel>
-              {sortOptions.map((option) => (
-                <DropdownMenuItem
-                  key={option.value}
-                  onClick={() => setSortBy(option.value)}
-                  className="flex items-center justify-between"
-                >
-                  {option.label}
-                  {sortBy === option.value && <Check className="size-4" />}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                size="sm"
-                className={cn(
-                  "hidden sm:flex",
-                  filterType !== "all" && "border-primary text-primary"
-                )}
-              >
-                <SlidersHorizontal className="size-4" />
-                <span className="hidden lg:inline">
-                  {filterType !== "all" ? currentFilter?.label : "Filter"}
-                </span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48">
-              <DropdownMenuLabel className="text-xs text-muted-foreground">
-                Filter by
-              </DropdownMenuLabel>
-              {filterOptions.map((option) => (
-                <DropdownMenuItem
-                  key={option.value}
-                  onClick={() => setFilterType(option.value)}
-                  className="flex items-center justify-between"
-                >
-                  {option.label}
-                  {filterType === option.value && <Check className="size-4" />}
-                </DropdownMenuItem>
-              ))}
-              {filterType !== "all" && (
-                <>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem
-                    onClick={() => setFilterType("all")}
-                    className="text-muted-foreground"
-                  >
-                    Clear filter
-                  </DropdownMenuItem>
-                </>
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <Button size="sm" className="hidden sm:flex" type="button">
-            <Plus className="size-4" />
-            Add Site
-          </Button>
 
           <Separator orientation="vertical" className="h-5 hidden sm:block" />
           <ThemeToggle />
