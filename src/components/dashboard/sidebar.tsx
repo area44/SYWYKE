@@ -2,7 +2,7 @@
 
 import { Search, Tag } from "lucide-react";
 import * as React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import {
   Sidebar,
@@ -26,7 +26,6 @@ export function BookmarksSidebar({
         <div className="flex items-center justify-end">
           <Avatar className="size-6.5">
             <AvatarImage src="/logo.png" />
-            <AvatarFallback />
           </Avatar>
         </div>
       </SidebarHeader>
