@@ -1,0 +1,20 @@
+
+> @area44/sywyke@25.12.27 dev
+> astro dev
+
+[vite] connected.
+18:48:52 [types] Generated 3ms
+[vite] connected.
+18:48:53 [content] Syncing content
+18:48:53 [content] Synced content
+18:48:53 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.1.0 ready in 3867 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+18:48:53 watching for file changes...
+18:49:12 [200] / 136ms
+18:49:14 [vite] ✨ new dependencies optimized: astro/virtual-modules/transitions-router.js, astro/virtual-modules/transitions-types.js, astro/virtual-modules/transitions-events.js, astro/virtual-modules/transitions-swap-functions.js, astro/runtime/client/dev-toolbar/entrypoint.js
+18:49:14 [vite] ✨ optimized dependencies changed. reloading
+18:49:15 [404] /logo.png 16ms
+18:49:15 [200] / 27ms
+18:49:17 [404] /logo.png 1ms

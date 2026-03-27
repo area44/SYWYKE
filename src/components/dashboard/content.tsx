@@ -27,17 +27,8 @@ export function BookmarksContent() {
     (c) => c.id === selectedCollection
   );
 
-  const getViewTitle = (view: MainView) => {
-    switch (view) {
-      case "favorites":
-        return "Favorites";
-      case "archive":
-        return "Archive";
-      case "trash":
-        return "Trash";
-      default:
-        return currentCollection?.name || "All Sites";
-    }
+  const getViewTitle = (_view: MainView) => {
+    return currentCollection?.name || "All Sites";
   };
 
   const activeTagsData = tags.filter((t) => selectedTags.includes(t.id));
@@ -66,7 +57,6 @@ export function BookmarksContent() {
               <div className="flex flex-wrap items-center gap-2">
                 {filterType !== "all" && currentView === "all" && (
                   <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium bg-primary/10 text-primary">
-                    {filterType === "favorites" && "Favorites only"}
                     {filterType === "with-tags" && "With tags"}
                     {filterType === "without-tags" && "Without tags"}
                     <button
