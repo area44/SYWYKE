@@ -8,13 +8,21 @@ SYWYKE is an open-source project that aims to gather and showcase awesome websit
 
 ## Features
 
-- **Astro:** SYWYKE is built using Astro, a modern front-end framework for building websites. Astro combines the best of static site generation and server-side rendering to deliver fast, performant websites.
+- **Astro 6:** SYWYKE is built using Astro 6, a modern front-end framework for building websites. Astro combines the best of static site generation and server-side rendering to deliver fast, performant websites.
+
+- **React 19 & Tailwind CSS 4:** Modern UI components built with React 19 and styled with the latest Tailwind CSS 4.
+
+- **Minimalist Dashboard:** A streamlined, interactive dashboard experience for managing and discovering bookmarks.
+
+- **Zustand 5:** Global state management for bookmarks, collections, and tags.
+
+- **Pagefind Search:** Fast, client-side search functionality powered by Pagefind.
 
 - **Tagging System:** Each website in SYWYKE is associated with one or more tags, allowing users to filter websites based on their interests.
 
-- **Easy Contribution:** Adding a new website to SYWYKE is simple. Just create a Markdown (.md) file in the src/data directory and provide the necessary details like title, site URL, description, and tags.
+- **Easy Contribution:** Adding a new website to SYWYKE is simple. Just create a Markdown (.md) file in the `src/content/sites/` directory and provide the necessary details like title, site URL, description, and tags.
 
-- **Responsive Design:** SYWYKE is designed to be responsive, ensuring that it looks great and functions well on different devices and screen sizes.
+- **Responsive Design:** SYWYKE is designed to be responsive, ensuring that it looks great and functions well on different devices on screen sizes.
 
 ## Getting Started
 
