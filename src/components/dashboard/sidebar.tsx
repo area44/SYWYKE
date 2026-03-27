@@ -1,13 +1,12 @@
 "use client";
 
-import { Globe, Search, Tag } from "lucide-react";
+import { Search, Tag } from "lucide-react";
 import * as React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
@@ -27,7 +26,6 @@ export function BookmarksSidebar({
         <div className="flex items-center justify-end">
           <Avatar className="size-6.5">
             <AvatarImage src="/logo.png" />
-            <AvatarFallback>SY</AvatarFallback>
           </Avatar>
         </div>
       </SidebarHeader>
@@ -67,17 +65,6 @@ export function BookmarksSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="px-5 pb-5">
-        <a
-          href="https://github.com/AREA44/SYWYKE"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 h-9 px-4 rounded-md border border-border bg-background hover:bg-muted shadow-xs text-sm font-medium w-full"
-        >
-          <Globe className="size-4" />
-          sywyke.vercel.app
-        </a>
-      </SidebarFooter>
     </Sidebar>
   );
 }
