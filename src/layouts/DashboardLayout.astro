@@ -1,0 +1,20 @@
+---
+import HeadSEO from "@/components/HeadSEO.astro";
+import { cn } from "@/lib/utils";
+
+const { title, description, ogImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <HeadSEO title={title} description={description} ogImage={ogImage} />
+  </head>
+  <body
+    class={cn(
+      "overscroll-none antialiased selection:bg-primary selection:text-primary-foreground",
+    )}
+  >
+    <slot />
+  </body>
+</html>
