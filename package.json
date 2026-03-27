@@ -47,8 +47,5 @@
     "@types/react-dom": "^19.2.3",
     "pagefind": "^1.4.0",
     "typescript": "^6.0.2"
-  },
-  "overrides": {
-    "vite": "^7"
   }
 }
