@@ -53,5 +53,4 @@ SYWYKE is licensed under the MIT License.
 We build upon the knowledge and success of these pioneers. Here are a few Open Source projects that have inspired us along the way.
 
 - [shadcn/ui](https://ui.shadcn.com)
-- [rachsmith.com](https://rachsmith.com)
-- [flo-bit's blog template](https://flo-bit.dev/blog-template)
+- [Square UI](https://square.lndev.me)
