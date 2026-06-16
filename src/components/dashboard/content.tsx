@@ -24,7 +24,7 @@ export function BookmarksContent() {
   const filteredBookmarks = getFilteredBookmarks();
 
   const currentCollection = collections.find(
-    (c) => c.id === selectedCollection
+    (c) => c.id === selectedCollection,
   );
 
   const getViewTitle = (_view: MainView) => {

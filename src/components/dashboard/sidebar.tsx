@@ -1,8 +1,9 @@
 "use client";
 
 import { Search, Tag } from "lucide-react";
-import * as React from "react";
+import type * as React from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import {
   Sidebar,
@@ -50,15 +51,20 @@ export function BookmarksSidebar({
                   type="button"
                   key={tag.id}
                   onClick={() => toggleTag(tag.id)}
-                  className={cn(
-                    "inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
-                    selectedTags.includes(tag.id)
-                      ? "bg-primary text-primary-foreground"
-                      : tag.color
-                  )}
+                  className="group"
                 >
-                  <Tag className="size-3" />
-                  {tag.name}
+                  <Badge
+                    variant={
+                      selectedTags.includes(tag.id) ? "default" : "outline"
+                    }
+                    className={cn(
+                      "gap-1 h-7 px-2 font-normal transition-colors cursor-pointer",
+                      !selectedTags.includes(tag.id) && "bg-background/50",
+                    )}
+                  >
+                    <Tag className="size-3" />
+                    {tag.name}
+                  </Badge>
                 </button>
               ))}
             </div>

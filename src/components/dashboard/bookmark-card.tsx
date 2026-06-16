@@ -23,7 +23,7 @@ export function BookmarkCard({
   const { tags: allTags } = useBookmarksStore();
 
   const bookmarkTags = allTags.filter(
-    (tag) => bookmark.tags.includes(tag.name) || bookmark.tags.includes(tag.id)
+    (tag) => bookmark.tags.includes(tag.name) || bookmark.tags.includes(tag.id),
   );
 
   const handleCopyUrl = () => {
@@ -56,7 +56,7 @@ export function BookmarkCard({
                     key={tag.id}
                     className={cn(
                       "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium",
-                      tag.color
+                      tag.color,
                     )}
                   >
                     {tag.name}
@@ -151,7 +151,7 @@ export function BookmarkCard({
                   key={tag.id}
                   className={cn(
                     "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium",
-                    tag.color
+                    tag.color,
                   )}
                 >
                   {tag.name}

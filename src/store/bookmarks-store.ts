@@ -110,7 +110,7 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
       bookmarks: state.bookmarks.map((bookmark) =>
         bookmark.id === bookmarkId
           ? { ...bookmark, isFavorite: !bookmark.isFavorite }
-          : bookmark
+          : bookmark,
       ),
     })),
   archiveBookmark: (bookmarkId) =>
@@ -128,7 +128,7 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
       if (!bookmark) return state;
       return {
         archivedBookmarks: state.archivedBookmarks.filter(
-          (b) => b.id !== bookmarkId
+          (b) => b.id !== bookmarkId,
         ),
         bookmarks: [...state.bookmarks, bookmark],
       };
@@ -148,7 +148,7 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
       if (!bookmark) return state;
       return {
         trashedBookmarks: state.trashedBookmarks.filter(
-          (b) => b.id !== bookmarkId
+          (b) => b.id !== bookmarkId,
         ),
         bookmarks: [...state.bookmarks, bookmark],
       };
@@ -156,7 +156,7 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
   permanentlyDelete: (bookmarkId) =>
     set((state) => ({
       trashedBookmarks: state.trashedBookmarks.filter(
-        (b) => b.id !== bookmarkId
+        (b) => b.id !== bookmarkId,
       ),
     })),
   getFilteredBookmarks: () => {
@@ -170,12 +170,12 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
     let filtered = [...source];
     if (state.selectedCollection !== "all") {
       filtered = filtered.filter(
-        (b) => b.collectionId === state.selectedCollection
+        (b) => b.collectionId === state.selectedCollection,
       );
     }
     if (state.selectedTags.length > 0) {
       filtered = filtered.filter((b) =>
-        state.selectedTags.some((tag) => b.tags.includes(tag))
+        state.selectedTags.some((tag) => b.tags.includes(tag)),
       );
     }
     if (state.searchQuery) {
@@ -184,7 +184,7 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
         (b) =>
           b.title.toLowerCase().includes(query) ||
           b.description.toLowerCase().includes(query) ||
-          b.url.toLowerCase().includes(query)
+          b.url.toLowerCase().includes(query),
       );
     }
 
@@ -206,13 +206,13 @@ export const useBookmarksStore = create<BookmarksState>((set, get) => ({
       case "date-newest":
         filtered.sort(
           (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         );
         break;
       case "date-oldest":
         filtered.sort(
           (a, b) =>
-            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
         );
         break;
       case "alpha-az":
