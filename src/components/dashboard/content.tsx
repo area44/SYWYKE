@@ -113,7 +113,10 @@ export function BookmarksContent() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
+                  role="img"
+                  aria-labelledby="no-sites-found-title"
                 >
+                  <title id="no-sites-found-title">No sites found</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
