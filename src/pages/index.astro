@@ -22,7 +22,7 @@ const bookmarks = allSites.map((site) => ({
 const tags = uniqueTagsStrings.map((tag) => ({
   id: tag,
   name: tag,
-  color: "bg-blue-500/10 text-blue-500",
+  color: "bg-muted text-muted-foreground",
   count: allSites.filter((s) => s.data.tags?.includes(tag)).length,
 }));
 
@@ -38,14 +38,14 @@ const collections = [
     id: "design",
     name: "Design",
     icon: "palette",
-    color: "violet",
+    color: "neutral",
     count: allSites.filter((s) => s.data.tags?.includes("design")).length,
   },
   {
     id: "dev",
     name: "Development",
     icon: "code",
-    color: "blue",
+    color: "neutral",
     count: allSites.filter(
       (s) => s.data.tags?.includes("develop") || s.data.tags?.includes("dev")
     ).length,
