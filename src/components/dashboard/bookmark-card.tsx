@@ -1,6 +1,7 @@
 "use client";
 
 import { Copy, ExternalLink, MoreHorizontal } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -52,15 +53,13 @@ export function BookmarkCard({
             {bookmarkTags.length > 0 && (
               <div className="hidden sm:flex items-center gap-1">
                 {bookmarkTags.slice(0, 2).map((tag) => (
-                  <span
+                  <Badge
                     key={tag.id}
-                    className={cn(
-                      "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium",
-                      tag.color
-                    )}
+                    variant="secondary"
+                    className="text-[10px] h-4 px-1"
                   >
                     {tag.name}
-                  </span>
+                  </Badge>
                 ))}
                 {bookmarkTags.length > 2 && (
                   <span className="text-[10px] text-muted-foreground">
@@ -79,10 +78,10 @@ export function BookmarkCard({
             <ExternalLink className="size-4" />
           </Button>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon-xs">
-                <MoreHorizontal className="size-4" />
-              </Button>
+            <DropdownMenuTrigger
+              render={<Button variant="ghost" size="icon-xs" />}
+            >
+              <MoreHorizontal className="size-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={handleCopyUrl}>
@@ -100,14 +99,16 @@ export function BookmarkCard({
     <div className="group relative flex flex-col rounded-xl border bg-card overflow-hidden hover:bg-accent/30 transition-colors">
       <div className="absolute top-3 right-3 z-10 flex items-center gap-1">
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="secondary"
-              size="icon-xs"
-              className="bg-background/80 backdrop-blur-sm"
-            >
-              <MoreHorizontal className="size-4" />
-            </Button>
+          <DropdownMenuTrigger
+            render={
+              <Button
+                variant="secondary"
+                size="icon-xs"
+                className="bg-background/80 backdrop-blur-sm"
+              />
+            }
+          >
+            <MoreHorizontal className="size-4" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuItem onClick={handleCopyUrl}>
@@ -147,15 +148,13 @@ export function BookmarkCard({
           {bookmarkTags.length > 0 && (
             <div className="flex flex-wrap gap-1 pt-1">
               {bookmarkTags.slice(0, 3).map((tag) => (
-                <span
+                <Badge
                   key={tag.id}
-                  className={cn(
-                    "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium",
-                    tag.color
-                  )}
+                  variant="secondary"
+                  className="text-[10px] h-4 px-1"
                 >
                   {tag.name}
-                </span>
+                </Badge>
               ))}
               {bookmarkTags.length > 3 && (
                 <span className="text-[10px] text-muted-foreground py-0.5">

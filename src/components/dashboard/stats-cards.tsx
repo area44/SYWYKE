@@ -7,12 +7,12 @@ const stats = [
   {
     label: "Total Bookmarks",
     icon: Bookmark,
-    color: "bg-blue-500/10 text-blue-500",
+    color: "bg-muted text-muted-foreground",
   },
   {
     label: "Tags Used",
     icon: Tag,
-    color: "bg-emerald-500/10 text-emerald-500",
+    color: "bg-muted text-muted-foreground",
   },
 ];
 

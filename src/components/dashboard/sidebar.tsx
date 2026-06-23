@@ -54,7 +54,7 @@ export function BookmarksSidebar({
                     "inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
                     selectedTags.includes(tag.id)
                       ? "bg-primary text-primary-foreground"
-                      : tag.color
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                   )}
                 >
                   <Tag className="size-3" />
