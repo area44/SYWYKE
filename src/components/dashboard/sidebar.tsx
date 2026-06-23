@@ -2,14 +2,12 @@
 
 import { Search, Tag } from "lucide-react";
 import * as React from "react";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarHeader,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { useBookmarksStore } from "@/store/bookmarks-store";
@@ -22,13 +20,6 @@ export function BookmarksSidebar({
 
   return (
     <Sidebar collapsible="offcanvas" className="lg:border-r-0!" {...props}>
-      <SidebarHeader className="p-5 pb-0">
-        <div className="flex items-center justify-end">
-          <Avatar className="size-6.5">
-            <AvatarImage src="/logo.png" />
-          </Avatar>
-        </div>
-      </SidebarHeader>
       <SidebarContent className="px-5 pt-5">
         <div className="relative mb-4">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
