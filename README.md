@@ -8,7 +8,7 @@ SYWYKE is an open-source project that aims to gather and showcase awesome websit
 
 ## Features
 
-- **Astro 6:** SYWYKE is built using Astro 6, a modern front-end framework for building websites. Astro combines the best of static site generation and server-side rendering to deliver fast, performant websites.
+- **Astro 7:** SYWYKE is built using Astro 7, a modern front-end framework for building websites. Astro combines the best of static site generation and server-side rendering to deliver fast, performant websites.
 
 - **React 19 & Tailwind CSS 4:** Modern UI components built with React 19 and styled with the latest Tailwind CSS 4.
 
