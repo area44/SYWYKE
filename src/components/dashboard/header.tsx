@@ -1,9 +1,8 @@
 "use client";
 
-import { LayoutGrid, List, Search } from "lucide-react";
+import { LayoutGrid, List } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
@@ -14,8 +13,7 @@ interface BookmarksHeaderProps {
 }
 
 export function BookmarksHeader({ title = "Bookmarks" }: BookmarksHeaderProps) {
-  const { viewMode, setViewMode, searchQuery, setSearchQuery } =
-    useBookmarksStore();
+  const { viewMode, setViewMode } = useBookmarksStore();
 
   return (
     <header className="w-full border-b">
@@ -27,16 +25,6 @@ export function BookmarksHeader({ title = "Bookmarks" }: BookmarksHeaderProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="relative hidden md:block">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-            <Input
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-9 w-64 h-9"
-            />
-          </div>
-
           <div className="flex items-center border rounded-md p-0.5">
             <Button
               variant="ghost"
