@@ -23,7 +23,7 @@
     "lucide-react": "^1.21.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "shadcn": "^4.11.1",
+    "shadcn": "^4.12.0",
     "sharp": "^0.35.2",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.1",
