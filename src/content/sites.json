@@ -361,7 +361,7 @@
     "title": "Lucidchart",
     "url": "https://lucid.app",
     "description": "Diagramming powered by intelligence.",
-    "tags": ["tools", "ai"]
+    "tags": ["tool", "ai"]
   },
   {
     "id": "ludwig",
@@ -543,7 +543,7 @@
     "title": "Sentence dictionary design",
     "url": "https://sentencedict.com",
     "description": "Good sentence examples for every word.",
-    "tags": ["english", "tool"]
+    "tags": ["language", "tool"]
   },
   {
     "id": "sentence-stack",
@@ -557,7 +557,7 @@
     "title": "Serial & keys",
     "url": "https://www.serials.ws",
     "description": "Serials & keys - unlocks the world.",
-    "tags": ["hack"]
+    "tags": ["download"]
   },
   {
     "id": "shadcn-ui",
@@ -578,7 +578,7 @@
     "title": "Slidesgo",
     "url": "https://slidesgo.com",
     "description": "Free Google Slides and PowerPoint templates.",
-    "tags": ["download", "ms-office"]
+    "tags": ["download", "design"]
   },
   {
     "id": "smallpdf",
