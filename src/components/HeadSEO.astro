@@ -73,5 +73,25 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
 
   <ClientRouter />
 
+  <script is:inline>
+    const applyTheme = () => {
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return 'dark';
+      })();
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    };
+
+    applyTheme();
+
+    document.addEventListener('astro:after-swap', applyTheme);
+  </script>
+
   <Font cssVariable="--font-geist" preload />
 </head>

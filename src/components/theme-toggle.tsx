@@ -20,6 +20,9 @@ export function ThemeToggle() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("theme", nextTheme);
+    }
   };
 
   return (
