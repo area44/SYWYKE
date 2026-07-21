@@ -1,9 +1,10 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { file } from "astro/loaders";
 
 const sites = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/content/sites" }),
+  loader: file("src/content/sites.json"),
   schema: z.object({
+    id: z.string(),
     title: z.string(),
     url: z.string().url(),
     description: z.string(),

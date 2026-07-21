@@ -22,14 +22,12 @@ interface DashboardMainProps {
 
 export function DashboardMain({ initialData }: DashboardMainProps) {
   const setInitialData = useBookmarksStore((state) => state.setInitialData);
-  const [initialized, setInitialized] = React.useState(false);
+  const prevInitialDataRef = React.useRef<typeof initialData | null>(null);
 
-  React.useEffect(() => {
+  if (prevInitialDataRef.current !== initialData) {
     setInitialData(initialData);
-    setInitialized(true);
-  }, [initialData, setInitialData]);
-
-  if (!initialized) return null;
+    prevInitialDataRef.current = initialData;
+  }
 
   return (
     <SidebarProvider className="bg-sidebar">
