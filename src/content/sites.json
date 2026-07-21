@@ -1,0 +1,737 @@
+[
+  {
+    "id": "21st-dev",
+    "title": "21st.dev",
+    "url": "https://21st.dev",
+    "description": "Discover, share, and craft UI components.",
+    "tags": ["ui", "components", "design", "develop"]
+  },
+  {
+    "id": "750-words",
+    "title": "750 Words",
+    "url": "https://www.750words.com",
+    "description": "Write every day.",
+    "tags": ["language"]
+  },
+  {
+    "id": "adobe-express",
+    "title": "Adobe Creative Cloud Express",
+    "url": "https://www.adobe.com/express",
+    "description": "Make Images, Videos and Web Stories for Free in Minutes.",
+    "tags": ["design", "photo", "video", "tool"]
+  },
+  {
+    "id": "aeon",
+    "title": "Aeon",
+    "url": "https://aeon.co",
+    "description": "A world of ideas.",
+    "tags": ["explore"]
+  },
+  {
+    "id": "alison",
+    "title": "Alison",
+    "url": "https://alison.com",
+    "description": "Free design Courses from the World’s Top Publishers.",
+    "tags": ["learn"]
+  },
+  {
+    "id": "animated-backgrounds",
+    "title": "Animated Backgrounds",
+    "url": "https://animatedbackgrounds.me",
+    "description": "A Collection of 30+ animated backgrounds for websites and blogs.With Animated Backgrounds, set a simple, elegant background animations on your websites and blogs.",
+    "tags": ["design", "develop", "ui", "components"]
+  },
+  {
+    "id": "arc-demo",
+    "title": "Arc Demo",
+    "url": "https://arc.tencent.com/en/ai-demos/imgRestor",
+    "description": "Real-ESRGAN aims at developing Practical Algorithms for General Image/Video Restoration.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "bigjpg",
+    "title": "Bigjpg",
+    "url": "https://bigjpg.com",
+    "description": "AI Image Enlarger.",
+    "tags": ["ai", "design", "photo", "tool"]
+  },
+  {
+    "id": "bitwarden",
+    "title": "Bitwarden",
+    "url": "https://bitwarden.com",
+    "description": "Open Source Password Manager.",
+    "tags": ["opensource", "tool"]
+  },
+  {
+    "id": "blackbox",
+    "title": "Blackbox",
+    "url": "https://www.useblackbox.io",
+    "description": "Code As Fast As You Think.",
+    "tags": ["tool", "develop"]
+  },
+  {
+    "id": "blurred",
+    "title": "Blurred data URLs for Next.js",
+    "url": "https://blurred.dev",
+    "description": "Next.js Image blurDataURL generator.",
+    "tags": ["develop", "tool", "photo"]
+  },
+  {
+    "id": "bolt",
+    "title": "Bolt",
+    "url": "https://bolt.new",
+    "description": "Create stunning apps & websites by chatting with AI.",
+    "tags": ["develop", "tool", "design", "ai"]
+  },
+  {
+    "id": "brandmark",
+    "title": "Brandmark",
+    "url": "https://brandmark.io/",
+    "description": "Create a unique, professional logo for your business.",
+    "tags": ["design", "tool"]
+  },
+  {
+    "id": "caesium",
+    "title": "Caesium",
+    "url": "https://caesium.app",
+    "description": "An image compression software that helps you store, send and share digital pictures, supporting JPG, PNG and WebP formats.",
+    "tags": ["photo", "tool"]
+  },
+  {
+    "id": "calmly-writer",
+    "title": "Calmly Writer",
+    "url": "https://www.calmlywriter.com",
+    "description": "The Ultimate Ditraction-Free Writing Tool.",
+    "tags": ["tool"]
+  },
+  {
+    "id": "canva",
+    "title": "Canva",
+    "url": "https://www.canva.com",
+    "description": "Canva makes design simple for everyone.",
+    "tags": ["design", "tool", "photo", "video"]
+  },
+  {
+    "id": "chatgpt",
+    "title": "ChatGPT",
+    "url": "https://chatgpt.com",
+    "description": "ChatGPT is a sibling model to InstructGPT⁠, which is trained to follow an instruction in a prompt and provide a detailed response.",
+    "tags": ["ai", "tool"]
+  },
+  {
+    "id": "chief-tools",
+    "title": "Chief Tools",
+    "url": "https://chief.app",
+    "description": "Tools helping you manage and monitor your infrastructure.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "claude",
+    "title": "Claude",
+    "url": "https://claude.ai",
+    "description": "Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.",
+    "tags": ["tool", "ai"]
+  },
+  {
+    "id": "cleanup-pictures",
+    "title": "Cleanup.pictures",
+    "url": "https://cleanup.pictures",
+    "description": "Remove unwanted objects, people, text and defects from any picture for free.",
+    "tags": ["ai", "design", "photo", "tool"]
+  },
+  {
+    "id": "clip-champ",
+    "title": "Clipchamp",
+    "url": "https://clipchamp.com",
+    "description": "All your video needs in one place.",
+    "tags": ["design", "video", "tool"]
+  },
+  {
+    "id": "codebeautify",
+    "title": "Codebeautify",
+    "url": "https://codebeautify.org",
+    "description": "JSON Beautifier, XML Viewer, JSON Converters, Hex Converters and More.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "deepseek",
+    "title": "deepseek",
+    "url": "https://www.deepseek.com/en",
+    "description": "DeepSeek, unravel the mystery of AGI with curiosity. Answer the essential question with long-termism.",
+    "tags": ["develop", "tool", "ai"]
+  },
+  {
+    "id": "deepwiki",
+    "title": "DeepWiki",
+    "url": "https://deepwiki.com",
+    "description": "DeepWiki provides up-to-date documentation you can talk to, for every repo in the world. Think Deep Research for GitHub - powered by Devin.",
+    "tags": ["tool", "ai"]
+  },
+  {
+    "id": "den4b",
+    "title": "den4b.com",
+    "url": "https://www.den4b.com/tools",
+    "description": "These free design design might come in handy for software developers and technology enthusiasts.",
+    "tags": ["develop", "download"]
+  },
+  {
+    "id": "downgit",
+    "title": "DownGit",
+    "url": "https://downgit.github.io/#/home",
+    "description": "Create GitHub Resource Download Link.",
+    "tags": ["develop", "share", "tool"]
+  },
+  {
+    "id": "esleschool",
+    "title": "ESLeSchool",
+    "url": "https://www.esleschool.com/",
+    "description": "Free English Online Exercises and Activities for all levels",
+    "tags": ["language"]
+  },
+  {
+    "id": "eyecandy",
+    "title": "Eyecandy",
+    "url": "https://eyecannndy.com/",
+    "description": "Visual Technique Library",
+    "tags": ["video", "explore"]
+  },
+  {
+    "id": "filebin",
+    "title": "Filebin",
+    "url": "https://filebin.net",
+    "description": "Convenient file sharing on the web, without registration. The files will expire automatically 1 week.",
+    "tags": ["share"]
+  },
+  {
+    "id": "fotojet",
+    "title": "FotoJet",
+    "url": "https://www.fotojet.com",
+    "description": "Turn Your Ideas into Stunning Artworks.",
+    "tags": ["explore"]
+  },
+  {
+    "id": "free-for-dev",
+    "title": "Free for developers",
+    "url": "https://free-for.dev",
+    "description": "This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "freeconvert",
+    "title": "FreeConvert.com",
+    "url": "https://www.freeconvert.com",
+    "description": "Free design File Converter.",
+    "tags": ["tool"]
+  },
+  {
+    "id": "gandr-io",
+    "title": "gandr.io",
+    "url": "https://gandr.io",
+    "description": "Make a photo collage online with unlimited photos.",
+    "tags": ["tool", "photo"]
+  },
+  {
+    "id": "gemini",
+    "title": "Gemini",
+    "url": "https://gemini.google.com",
+    "description": "Chat to superharge your ideas.",
+    "tags": ["ai", "tool"]
+  },
+  {
+    "id": "git-io",
+    "title": "Git.io",
+    "url": "https://git.io",
+    "description": "Shorten url:  by GitHub.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "gofile",
+    "title": "Gofile",
+    "url": "https://gofile.io",
+    "description": "File sharing platform, anonymous and free.",
+    "tags": ["share"]
+  },
+  {
+    "id": "google-ai-studio",
+    "title": "Google AI Studio",
+    "url": "https://aistudio.google.com/",
+    "description": "Google AI Studio is a platform for building, training, and deploying machine learning models using Google's AI technologies.",
+    "tags": ["develop", "tool", "ai"]
+  },
+  {
+    "id": "happy-hues",
+    "title": "Happy Hues",
+    "url": "https://www.happyhues.co",
+    "description": "Curated colors in context.",
+    "tags": ["design", "develop"]
+  },
+  {
+    "id": "heic2jpeg",
+    "title": "HEIC to JPEG",
+    "url": "https://heic2jpg.vercel.app",
+    "description": "Convert HEIC to JPEG on your device.",
+    "tags": ["tool", "develop"]
+  },
+  {
+    "id": "hexed",
+    "title": "HexEd.it",
+    "url": "https://hexed.it",
+    "description": "The client-side JavaScript based hex editor.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "hotpot",
+    "title": "Hotpot.ai",
+    "url": "https://hotpot.ai",
+    "description": "Hotpot makes graphic design and image editing easier with AI design.",
+    "tags": ["ai", "design", "photo", "tool"]
+  },
+  {
+    "id": "i2ocr",
+    "title": "i2OCR",
+    "url": "https://www.i2ocr.com",
+    "description": "i2OCR is a free online Optical Character Recognition (OCR) that extracts text from images and scanned documents so that it can be edited, formatted, indexed, searched, or translated.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "icon-sets-iconify",
+    "title": "Icon Sets - Iconify",
+    "url": "https://icon-sets.iconify.design",
+    "description": "All icons available in Iconify ecosystem are open source, validated, cleaned up and automatically kept up to date.",
+    "tags": ["develop", "tool", "opensource"]
+  },
+  {
+    "id": "imgur",
+    "title": "Imgur",
+    "url": "https://imgur.com",
+    "description": "Where you’ll find the funniest, most informative and inspiring images, memes, GIFs, and visual stories served up in an endless stream of bite-sized fun.",
+    "tags": ["explore", "photo"]
+  },
+  {
+    "id": "inpainting",
+    "title": "Inpainting",
+    "url": "https://inpainter.vercel.app",
+    "description": "Inpainting is a process where missing parts of an artwork are filled in to present a complete image.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "introcave",
+    "title": "Introcave",
+    "url": "https://intromaker.com",
+    "description": "The easiest way to make a YouTube intro video.",
+    "tags": ["design", "video", "tool"]
+  },
+  {
+    "id": "jitter",
+    "title": "Jitter",
+    "url": "https://jitter.video",
+    "description": "The simplest motion design tool on the web.",
+    "tags": ["design", "video", "tool"]
+  },
+  {
+    "id": "karanpc",
+    "title": "Karan PC",
+    "url": "https://karanpc.com",
+    "description": "Download free software full.",
+    "tags": ["download"]
+  },
+  {
+    "id": "krea-ai",
+    "title": "KREA",
+    "url": "https://www.krea.ai",
+    "description": "Create an AI with your own style.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "lovable",
+    "title": "Lovable",
+    "url": "https://lovable.dev",
+    "description": "Create apps and websites by chatting with AI.",
+    "tags": ["develop", "tool", "design", "ai"]
+  },
+  {
+    "id": "lrepacks",
+    "title": "LRepacks",
+    "url": "https://lrepacks.net",
+    "description": "A Russian site includes software repack by Elchupacabra.",
+    "tags": ["download"]
+  },
+  {
+    "id": "lucidchart",
+    "title": "Lucidchart",
+    "url": "https://lucid.app",
+    "description": "Diagramming powered by intelligence.",
+    "tags": ["tools", "ai"]
+  },
+  {
+    "id": "ludwig",
+    "title": "Ludwig",
+    "url": "https://ludwig.guru",
+    "description": "Ludwig is the first sentence search engine that helps you write better English by giving you contextualized examples taken from reliable sources.",
+    "tags": ["language", "tool"]
+  },
+  {
+    "id": "magicui",
+    "title": "Magic UI",
+    "url": "https://magicui.design",
+    "description": "UI library for Design Engineers.",
+    "tags": ["develop", "ui", "design"]
+  },
+  {
+    "id": "next-ai-chatbot",
+    "title": "Next.js AI Chatbot",
+    "url": "https://chat.vercel.ai/",
+    "description": "This is an open source AI chatbot app template built with Next.js, the Vercel AI SDK, and Vercel KV.",
+    "tags": ["ai", "tool"]
+  },
+  {
+    "id": "novel",
+    "title": "Novel",
+    "url": "https://novel.sh",
+    "description": "A Notion-style WYSIWYG editor with AI-powered autocompletion.",
+    "tags": ["ai", "tool"]
+  },
+  {
+    "id": "omatsuri",
+    "title": "Omatsuri",
+    "url": "https://omatsuri.app",
+    "description": "Open source browser tools for everyday use",
+    "tags": ["develop", "tool", "opensource"]
+  },
+  {
+    "id": "open-source-agenda",
+    "title": "Open Source Agenda (OSA)",
+    "url": "https://www.opensourceagenda.com",
+    "description": "Discover the best free open source software projects.",
+    "tags": ["opensource", "develop"]
+  },
+  {
+    "id": "padlet",
+    "title": "Padlet",
+    "url": "https://padlet.com",
+    "description": "It’s a starry night. Make something stellar.",
+    "tags": ["share"]
+  },
+  {
+    "id": "pagespeed-insights",
+    "title": "PageSpeed Insights",
+    "url": "https://pagespeed.web.dev",
+    "description": "PageSpeed Insights (PSI) reports on the user experience of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "paint-by-text",
+    "title": "Paint by Text",
+    "url": "https://paintbytext.chat",
+    "description": "Edit your photos using written instructions, with the help of an AI.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "pdf-archive",
+    "title": "PDF Archive",
+    "url": "https://www.pdf-archive.com",
+    "description": "Host, share, publish and archive your PDF documents.",
+    "tags": ["share"]
+  },
+  {
+    "id": "pfp",
+    "title": "PFP",
+    "url": "https://pfpmaker.com",
+    "description": "Make an awesome profile picture from any photo.",
+    "tags": ["design", "photo", "tool"]
+  },
+  {
+    "id": "picwish",
+    "title": "PicWish",
+    "url": "https://picwish.com",
+    "description": "More than just a background remover. Pick a solid color, pre-designed template, or go with a customized background.",
+    "tags": ["ai", "photo", "design", "tool"]
+  },
+  {
+    "id": "pixabay",
+    "title": "Pixabay",
+    "url": "https://pixabay.com",
+    "description": "Stunning free images & royalty free stock.",
+    "tags": ["photo", "explore"]
+  },
+  {
+    "id": "pixeldrain",
+    "title": "Pixeldrain",
+    "url": "https://pixeldrain.com",
+    "description": "Free file sharing service.",
+    "tags": ["share"]
+  },
+  {
+    "id": "pixelied",
+    "title": "Pixelied",
+    "url": "https://pixelied.com",
+    "description": "Free Online Graphic Design Suite.",
+    "tags": ["develop", "tool", "photo", "design"]
+  },
+  {
+    "id": "plagiarism-detector",
+    "title": "Plagiarism Detector",
+    "url": "https://plagiarismdetector.net",
+    "description": "Plagiarism Checker Free.",
+    "tags": ["tool", "develop"]
+  },
+  {
+    "id": "postimages",
+    "title": "Postimages",
+    "url": "https://postimages.org",
+    "description": "Free image hosting / image upload.",
+    "tags": ["share", "photo"]
+  },
+  {
+    "id": "quivr",
+    "title": "Quivr",
+    "url": "https://www.quivr.app",
+    "description": "Quivr is your second brain in the cloud, designed to easily store and retrieve unstructured information.",
+    "tags": ["ai", "tool", "opensource"]
+  },
+  {
+    "id": "readable",
+    "title": "Readable",
+    "url": "https://readable.com",
+    "description": "Readable will quickly test the readability, spelling and grammar of your text and show you how and where to make improvements.",
+    "tags": ["language", "tool"]
+  },
+  {
+    "id": "reduced-to",
+    "title": "Reduced.to",
+    "url": "https://reduced.to",
+    "description": "Add your very long URL in the input below and click on the button to make it shorter.",
+    "tags": ["tool"]
+  },
+  {
+    "id": "respimagelint",
+    "title": "RespImageLint",
+    "url": "https://ausi.github.io/respimagelint",
+    "description": "Linter for Responsive Images.",
+    "tags": ["tool", "opensource"]
+  },
+  {
+    "id": "restore-photos",
+    "title": "restorePhotos.io",
+    "url": "https://www.restorephotos.io",
+    "description": "Restoring old photos using AI for everyone.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "rgadguard",
+    "title": "List of files by Microsoft®",
+    "url": "https://files.rg-adguard.net",
+    "description": "List of files by Microsoft®.",
+    "tags": ["download"]
+  },
+  {
+    "id": "same-new",
+    "title": "Same",
+    "url": "https://same.new",
+    "description": "Build fullstack web apps by prompting.",
+    "tags": ["tool", "ai"]
+  },
+  {
+    "id": "scribblediffusion",
+    "title": "Scribble Diffusion",
+    "url": "https://scribblediffusion.com",
+    "description": "Turn your sketch into a refined image using AI.",
+    "tags": ["ai", "develop", "tool"]
+  },
+  {
+    "id": "sentence-dict",
+    "title": "Sentence dictionary design",
+    "url": "https://sentencedict.com",
+    "description": "Good sentence examples for every word.",
+    "tags": ["english", "tool"]
+  },
+  {
+    "id": "sentence-stack",
+    "title": "Sentence Stack",
+    "url": "https://sentencestack.com",
+    "description": "Improve your English with our linguistic search engine backed by 300+ million sentences.",
+    "tags": ["language", "tool"]
+  },
+  {
+    "id": "serials",
+    "title": "Serial & keys",
+    "url": "https://www.serials.ws",
+    "description": "Serials & keys - unlocks the world.",
+    "tags": ["hack"]
+  },
+  {
+    "id": "shadcn-ui",
+    "title": "shadcn/ui",
+    "url": "https://ui.shadcn.com",
+    "description": "Build your component library.",
+    "tags": ["design", "develop", "opensource", "ui", "components"]
+  },
+  {
+    "id": "skiper-ui",
+    "title": "skiper/ui",
+    "url": "https://skiper-ui.com",
+    "description": "Components crafted for Modern Websites.",
+    "tags": ["design", "develop", "ui", "components"]
+  },
+  {
+    "id": "slidesgo",
+    "title": "Slidesgo",
+    "url": "https://slidesgo.com",
+    "description": "Free Google Slides and PowerPoint templates.",
+    "tags": ["download", "ms-office"]
+  },
+  {
+    "id": "smallpdf",
+    "title": "Smallpdf",
+    "url": "https://smallpdf.com",
+    "description": "A Free Solution for all your PDF Problems",
+    "tags": ["tool", "develop"]
+  },
+  {
+    "id": "snapedit",
+    "title": "SnapEdit",
+    "url": "https://snapedit.app",
+    "description": "Remove object faster & better with poweful AI technology.",
+    "tags": ["ai", "photo", "tool", "design"]
+  },
+  {
+    "id": "spirals",
+    "title": "Spirals",
+    "url": "https://spirals.vercel.app",
+    "description": "Generate beautiful AI spiral art with one click.",
+    "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "squoosh",
+    "title": "Squoosh",
+    "url": "https://squoosh.app",
+    "description": "An image compression web app that reduces image sizes through numerous formats.",
+    "tags": ["photo", "develop", "tool"]
+  },
+  {
+    "id": "tailus",
+    "title": "Tailus",
+    "url": "https://tailus.io",
+    "description": "Build Customized modern Web UI.",
+    "tags": ["design", "develop", "opensource", "ui", "components"]
+  },
+  {
+    "id": "tarot-with-youtube",
+    "title": "Tarot with YouTube",
+    "url": "https://tarot.withyoutube.com",
+    "description": "An interactive Tarot reading experience featuring your favorite YouTube creators.",
+    "tags": ["explore"]
+  },
+  {
+    "id": "techbench",
+    "title": "TechBench by WZT",
+    "url": "https://tb.rg-adguard.net/public.php",
+    "description": "Help you without tedious search and registration to download Windows OS, Office directly from Microsoft servers.",
+    "tags": ["download"]
+  },
+  {
+    "id": "textfx",
+    "title": "TextFX",
+    "url": "https://textfx.withgoogle.com",
+    "description": "AI-powered tools for rappers, writers and wordsmiths.",
+    "tags": ["develop", "tool", "ai"]
+  },
+  {
+    "id": "the-stocks",
+    "title": "The Stocks",
+    "url": "https://thestocks.im",
+    "description": "Best royalty free photos, videos, mockups, icons and fonts.",
+    "tags": ["download", "photo", "video", "develop"]
+  },
+  {
+    "id": "transfer",
+    "title": "Transfer.it",
+    "url": "https://transfer.it",
+    "description": "Effortlessly share large files with Transfer.it by MEGA.",
+    "tags": ["share", "tool"]
+  },
+  {
+    "id": "transform",
+    "title": "Transform",
+    "url": "https://transform.tools",
+    "description": "A polyglot web converter.",
+    "tags": ["develop", "tool"]
+  },
+  {
+    "id": "ui-aceternity",
+    "title": "Aceternity UI",
+    "url": "https://ui.aceternity.com",
+    "description": "Copy paste the most trending components and use them in your websites without having to worry about styling and animations.",
+    "tags": ["develop", "design"]
+  },
+  {
+    "id": "unsplash",
+    "title": "Unsplash",
+    "url": "https://unsplash.com",
+    "description": "Photos for everyone.",
+    "tags": ["photo", "download"]
+  },
+  {
+    "id": "vecel-og-playground",
+    "title": "Vercel OG Image Playground",
+    "url": "https://og-playground.vercel.app",
+    "description": "Generate Open Graph images with Vercel’s Edge Function.",
+    "tags": ["develop", "tool", "opensource"]
+  },
+  {
+    "id": "vscheatsheet",
+    "title": "VSCheatsheet",
+    "url": "https://www.vscheatsheet.com",
+    "description": "Shortcuts in the shortest time possible.",
+    "tags": ["tool"]
+  },
+  {
+    "id": "windstatic",
+    "title": "Windstatic",
+    "url": "https://windstatic.com",
+    "description": "A set of elements, templates & layouts made with Tailwind CSS and Alpine.js",
+    "tags": ["design"]
+  },
+  {
+    "id": "wolframalpha",
+    "title": "Wolfram Alpha",
+    "url": "https://www.wolframalpha.com",
+    "description": "Computational knowledge engine.",
+    "tags": ["learn", "tool"]
+  },
+  {
+    "id": "write-improve",
+    "title": "Write & Improve",
+    "url": "https://writeandimprove.com",
+    "description": "Write & Improve is a FREE tool that helps every learner to improve their English writing.",
+    "tags": ["language", "tool"]
+  },
+  {
+    "id": "wsrv-nl",
+    "title": "wsrv.nl",
+    "url": "https://images.weserv.nl",
+    "description": "An image cache & resize service.",
+    "tags": ["photo", "develop", "tool"]
+  },
+  {
+    "id": "y2mate",
+    "title": "Y2mate",
+    "url": "https://www.y2mate.com",
+    "description": "Download Video and Audio from YouTube.",
+    "tags": ["download", "tool"]
+  },
+  {
+    "id": "yify-movies",
+    "title": "YIFY movies",
+    "url": "https://yts.mx",
+    "description": "Movies Torrent Download.",
+    "tags": ["download", "tool"]
+  },
+  {
+    "id": "yopmail",
+    "title": "Yopmail",
+    "url": "https://yopmail.com/en",
+    "description": "Disposable and Free email address.",
+    "tags": ["tool"]
+  }
+]
