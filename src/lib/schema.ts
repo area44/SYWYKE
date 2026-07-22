@@ -1,3 +1,5 @@
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { db } from "./db";
 
 export interface DbBookmark {
@@ -68,8 +70,118 @@ export async function initDatabase() {
   isDatabaseInitialized = true;
 }
 
-export async function getDbBookmarks() {
+export async function autoSeedIfEmpty() {
   await initDatabase();
+
+  try {
+    const countResult = await db.execute(
+      "SELECT COUNT(*) as count FROM bookmarks"
+    );
+    const count = Number(countResult.rows[0]?.count || 0);
+
+    if (count > 0) return;
+  } catch (err) {
+    // If table doesn't exist, initDatabase already handled it, but let's be safe
+    console.warn("Table count check failed, proceeding to seed anyway:", err);
+  }
+
+  console.log("Database is empty. Auto-seeding from seed-data.json...");
+
+  const jsonPath = join(process.cwd(), "src/lib/seed-data.json");
+  if (!existsSync(jsonPath)) {
+    console.error("Seed data file not found at:", jsonPath);
+    return;
+  }
+
+  try {
+    const rawData = readFileSync(jsonPath, "utf-8");
+    const sites = JSON.parse(rawData);
+
+    const collections = [
+      { id: "all", name: "All Sites", icon: "bookmark", color: "neutral" },
+      { id: "design", name: "Design", icon: "palette", color: "neutral" },
+      { id: "dev", name: "Development", icon: "code", color: "neutral" },
+    ];
+
+    const validTags = [
+      "ai",
+      "design",
+      "develop",
+      "download",
+      "explore",
+      "language",
+      "learn",
+      "opensource",
+      "photo",
+      "share",
+      "tool",
+      "ui",
+      "video",
+    ];
+
+    const batchQueries: { sql: string; args: unknown[] }[] = [];
+
+    // Insert collections
+    for (const col of collections) {
+      batchQueries.push({
+        sql: "INSERT OR IGNORE INTO collections (id, name, icon, color) VALUES (?, ?, ?, ?)",
+        args: [col.id, col.name, col.icon, col.color],
+      });
+    }
+
+    // Insert all valid tags
+    for (const t of validTags) {
+      batchQueries.push({
+        sql: "INSERT OR IGNORE INTO tags (id, name, color) VALUES (?, ?, ?)",
+        args: [t, t, "bg-muted text-muted-foreground"],
+      });
+    }
+
+    // Insert bookmarks and relations
+    for (const site of sites) {
+      let collectionId = "all";
+      if (site.tags?.includes("design")) {
+        collectionId = "design";
+      } else if (site.tags?.includes("develop")) {
+        collectionId = "dev";
+      }
+
+      const favicon = `https://www.google.com/s2/favicons?domain=${new URL(site.url).hostname}&sz=64`;
+
+      batchQueries.push({
+        sql: `INSERT OR IGNORE INTO bookmarks (id, title, url, description, favicon, collection_id, is_favorite, has_dark_icon, created_at)
+              VALUES (?, ?, ?, ?, ?, ?, 0, 0, datetime('now'))`,
+        args: [
+          site.id,
+          site.title,
+          site.url,
+          site.description,
+          favicon,
+          collectionId,
+        ],
+      });
+
+      if (site.tags) {
+        for (const tag of site.tags) {
+          if (validTags.includes(tag)) {
+            batchQueries.push({
+              sql: "INSERT OR IGNORE INTO bookmark_tags (bookmark_id, tag_id) VALUES (?, ?)",
+              args: [site.id, tag],
+            });
+          }
+        }
+      }
+    }
+
+    await db.batch(batchQueries, "write");
+    console.log("Database auto-seeded successfully with 120 items!");
+  } catch (err) {
+    console.error("Failed to auto-seed database:", err);
+  }
+}
+
+export async function getDbBookmarks() {
+  await autoSeedIfEmpty();
 
   // Fetch bookmarks
   const bookmarksResult = await db.execute(
@@ -110,7 +222,7 @@ export async function getDbBookmarks() {
 }
 
 export async function getDbCollections() {
-  await initDatabase();
+  await autoSeedIfEmpty();
 
   const collectionsResult = await db.execute("SELECT * FROM collections");
   const dbCollections = collectionsResult.rows as unknown as DbCollection[];
@@ -140,7 +252,7 @@ export async function getDbCollections() {
 }
 
 export async function getDbTags() {
-  await initDatabase();
+  await autoSeedIfEmpty();
 
   const tagsResult = await db.execute("SELECT * FROM tags ORDER BY id ASC");
   const dbTags = tagsResult.rows as unknown as DbTag[];
