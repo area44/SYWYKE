@@ -25,7 +25,11 @@ export interface DbTag {
   color: string;
 }
 
+let isDatabaseInitialized = false;
+
 export async function initDatabase() {
+  if (isDatabaseInitialized) return;
+
   await db.executeMultiple(`
     CREATE TABLE IF NOT EXISTS collections (
       id TEXT PRIMARY KEY,
@@ -60,6 +64,8 @@ export async function initDatabase() {
       FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
     );
   `);
+
+  isDatabaseInitialized = true;
 }
 
 export async function getDbBookmarks() {

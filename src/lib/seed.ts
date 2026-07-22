@@ -15,8 +15,8 @@ async function runSeed() {
   console.log("Initializing database and tables...");
   await initDatabase();
 
-  console.log("Reading existing sites from sites.json...");
-  const jsonPath = join(process.cwd(), "src/content/sites.json");
+  console.log("Reading existing sites from seed-data.json...");
+  const jsonPath = join(process.cwd(), "src/lib/seed-data.json");
   const rawData = readFileSync(jsonPath, "utf-8");
   const sites: RawSite[] = JSON.parse(rawData);
 
