@@ -9,8 +9,6 @@ export interface DbBookmark {
   description: string;
   favicon: string;
   collection_id: string;
-  is_favorite: number;
-  has_dark_icon: number;
   created_at: string;
 }
 
@@ -47,8 +45,6 @@ export async function initDatabase() {
       description TEXT NOT NULL,
       favicon TEXT NOT NULL,
       collection_id TEXT NOT NULL DEFAULT 'all',
-      is_favorite INTEGER NOT NULL DEFAULT 0,
-      has_dark_icon INTEGER NOT NULL DEFAULT 0,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
 
@@ -81,7 +77,6 @@ export async function autoSeedIfEmpty() {
 
     if (count > 0) return;
   } catch (err) {
-    // If table doesn't exist, initDatabase already handled it, but let's be safe
     console.warn("Table count check failed, proceeding to seed anyway:", err);
   }
 
@@ -149,8 +144,8 @@ export async function autoSeedIfEmpty() {
       const favicon = `https://www.google.com/s2/favicons?domain=${new URL(site.url).hostname}&sz=64`;
 
       batchQueries.push({
-        sql: `INSERT OR IGNORE INTO bookmarks (id, title, url, description, favicon, collection_id, is_favorite, has_dark_icon, created_at)
-              VALUES (?, ?, ?, ?, ?, ?, 0, 0, datetime('now'))`,
+        sql: `INSERT OR IGNORE INTO bookmarks (id, title, url, description, favicon, collection_id, created_at)
+              VALUES (?, ?, ?, ?, ?, ?, datetime('now'))`,
         args: [
           site.id,
           site.title,
@@ -216,8 +211,8 @@ export async function getDbBookmarks() {
     collectionId: b.collection_id,
     tags: tagsMap.get(b.id) || [],
     createdAt: b.created_at,
-    isFavorite: Boolean(b.is_favorite),
-    hasDarkIcon: Boolean(b.has_dark_icon),
+    isFavorite: false,
+    hasDarkIcon: false,
   }));
 }
 

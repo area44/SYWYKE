@@ -20,7 +20,7 @@ SYWYKE is an open-source project that aims to gather and showcase awesome websit
 
 - **Tagging System:** Each website in SYWYKE is associated with one or more tags, allowing users to filter websites based on their interests.
 
-- **Easy Contribution:** Adding a new website to SYWYKE is simple. Just create a Markdown (.md) file in the `src/content/sites/` directory and provide the necessary details like title, site URL, description, and tags.
+- **Easy Contribution:** Adding a new website to SYWYKE is simple. Just add its details (ID, title, URL, description, and tags) to the centralized `src/lib/seed-data.json` file.
 
 - **Responsive Design:** SYWYKE is designed to be responsive, ensuring that it looks great and functions well on different devices on screen sizes.
 
@@ -31,8 +31,32 @@ To run SYWYKE locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/AREA44/SYWYKE.git`
 2. Navigate to the project directory: `cd SYWYKE`
 3. Install dependencies: `pnpm install`
-4. Start the local development server: `pnpm run dev`
+4. Start the local development server: `pnpm run dev` (the SQLite database will automatically initialize and seed itself on first load!).
 5. Open your browser and visit [http://localhost:4321](http://localhost:4321) to view the SYWYKE site.
+
+## How to Add a New Site
+
+Adding a new website to the SYWYKE collection is simple. Follow these steps:
+
+1. **Locate the seed data file:**
+   Open `src/lib/seed-data.json` in your editor.
+
+2. **Add a new site entry:**
+   Insert a new JSON object alphabetically into the list. For example:
+   ```json
+   {
+     "id": "my-awesome-site",
+     "title": "My Awesome Site",
+     "url": "https://example.com",
+     "description": "An amazing resource that you wish you knew earlier.",
+     "tags": ["design", "tool"]
+   }
+   ```
+   *Available Tags:* `"ai"`, `"design"`, `"develop"`, `"download"`, `"explore"`, `"language"`, `"learn"`, `"opensource"`, `"photo"`, `"share"`, `"tool"`, `"ui"`, `"video"`.
+
+3. **Synchronize the database:**
+   * **Automatic Synchronizing:** Restart your local dev server or trigger a build, and our automatic database initialization fallback will detect any changes and synchronize them seamlessly.
+   * **Manual Seeding:** Alternatively, run `pnpm run db:seed` in your terminal to manually re-seed your local SQLite database from the JSON file.
 
 ## Contributing
 

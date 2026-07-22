@@ -83,8 +83,8 @@ async function runSeed() {
     const favicon = `https://www.google.com/s2/favicons?domain=${new URL(site.url).hostname}&sz=64`;
 
     batchQueries.push({
-      sql: `INSERT INTO bookmarks (id, title, url, description, favicon, collection_id, is_favorite, has_dark_icon, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, 0, 0, datetime('now'))`,
+      sql: `INSERT INTO bookmarks (id, title, url, description, favicon, collection_id, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, datetime('now'))`,
       args: [
         site.id,
         site.title,
