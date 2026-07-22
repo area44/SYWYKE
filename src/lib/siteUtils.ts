@@ -1,20 +1,18 @@
-import { getCollection } from "astro:content";
+import { getDbBookmarks } from "./schema";
 
-// Sort all sites alphabetically
+// Sort all sites alphabetically from the database
 export async function getSortedSites() {
-  const sites = await getCollection("sites");
-  return sites.sort((a, b) =>
-    (a.data.title || "").localeCompare(b.data.title || "")
-  );
+  const bookmarks = await getDbBookmarks();
+  return bookmarks.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
 }
 
-// Extract unique tags from sites
+// Extract unique tags from database sites
 export function extractUniqueTags(
-  sites: Awaited<ReturnType<typeof getSortedSites>>
+  bookmarks: Awaited<ReturnType<typeof getSortedSites>>
 ) {
   const tagSet = new Set<string>();
-  for (const site of sites) {
-    for (const tag of site.data.tags ?? []) {
+  for (const bookmark of bookmarks) {
+    for (const tag of bookmark.tags ?? []) {
       tagSet.add(tag);
     }
   }

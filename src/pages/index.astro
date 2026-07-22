@@ -1,56 +1,12 @@
 ---
 import { DashboardMain } from "@/components/dashboard/main";
 import Layout from "@/layouts/DashboardLayout.astro";
-import { extractUniqueTags, getSortedSites } from "@/lib/siteUtils";
+import { getDbBookmarks, getDbCollections, getDbTags } from "@/lib/schema";
 import "@/styles/global.css";
 
-const allSites = await getSortedSites();
-const uniqueTagsStrings = extractUniqueTags(allSites);
-
-const bookmarks = allSites.map((site) => ({
-  id: site.id,
-  title: site.data.title,
-  url: site.data.url,
-  description: site.data.description,
-  favicon: `https://www.google.com/s2/favicons?domain=${new URL(site.data.url).hostname}&sz=64`,
-  collectionId: "all",
-  tags: site.data.tags || [],
-  createdAt: new Date().toISOString(),
-  isFavorite: false,
-}));
-
-const tags = uniqueTagsStrings.map((tag) => ({
-  id: tag,
-  name: tag,
-  color: "bg-muted text-muted-foreground",
-  count: allSites.filter((s) => s.data.tags?.includes(tag)).length,
-}));
-
-const collections = [
-  {
-    id: "all",
-    name: "All Sites",
-    icon: "bookmark",
-    color: "neutral",
-    count: bookmarks.length,
-  },
-  {
-    id: "design",
-    name: "Design",
-    icon: "palette",
-    color: "neutral",
-    count: allSites.filter((s) => s.data.tags?.includes("design")).length,
-  },
-  {
-    id: "dev",
-    name: "Development",
-    icon: "code",
-    color: "neutral",
-    count: allSites.filter(
-      (s) => s.data.tags?.includes("develop") || s.data.tags?.includes("dev")
-    ).length,
-  },
-];
+const bookmarks = await getDbBookmarks();
+const collections = await getDbCollections();
+const tags = await getDbTags();
 
 const initialData = {
   bookmarks,
@@ -67,14 +23,14 @@ const description = "Sites You Wish You Knew Earlier by AREA44";
 
   {/* SEO and Search Indexing content */}
   <div style="display: none;">
-    {allSites.map(site => (
+    {bookmarks.map(site => (
         <article>
-            <h2>{site.data.title}</h2>
-            <p>{site.data.description}</p>
+            <h2>{site.title}</h2>
+            <p>{site.description}</p>
             <ul>
-                {site.data.tags?.map(tag => <li>{tag}</li>)}
+                {site.tags?.map(tag => <li>{tag}</li>)}
             </ul>
-            <a href={site.data.url}>{site.data.title}</a>
+            <a href={site.url}>{site.title}</a>
         </article>
     ))}
   </div>

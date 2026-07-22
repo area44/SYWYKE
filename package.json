@@ -11,11 +11,13 @@
     "preview": "astro preview",
     "format": "biome format --write",
     "lint": "biome lint --write",
-    "check": "biome check --write"
+    "check": "biome check --write",
+    "db:seed": "tsx src/lib/seed.ts"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.1",
     "@base-ui/react": "^1.6.0",
+    "@libsql/client": "^0.17.4",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.1.1",
     "class-variance-authority": "^0.7.1",
@@ -37,6 +39,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "pagefind": "^1.5.2",
+    "tsx": "^4.23.1",
     "typescript": "^7.0.2"
   }
 }

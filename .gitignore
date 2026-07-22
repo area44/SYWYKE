@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # astro cache
 .astro
+
+# local databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
