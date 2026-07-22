@@ -1,0 +1,14 @@
+---
+import { AdminPanel } from "@/components/dashboard/admin-panel";
+import Layout from "@/layouts/DashboardLayout.astro";
+import { getDbBookmarks } from "@/lib/schema";
+import "@/styles/global.css";
+
+const bookmarks = await getDbBookmarks();
+---
+
+<Layout title="SYWYKE Admin Panel" description="Manage websites in the collection dynamically.">
+  <div class="min-h-screen bg-background">
+    <AdminPanel initialBookmarks={bookmarks} client:load />
+  </div>
+</Layout>
