@@ -1,13 +1,10 @@
 # SYWYKE - Database Design for Scaling (1,000+ Sites)
 
-## Quick Verdict: The Absolute Best Setup for Storage & Frontend Deployment
+## Introduction
 
-For **1,000+ sites** deployed on a modern frontend platform like **Vercel** with **Astro**, the absolute best stack is:
+As SYWYKE scales from a few dozen static bookmarks to **1,000+ sites**, maintaining a flat JSON file (`sites.json`) in content collections becomes highly challenging. While Astro handles 1,000 static items during a build perfectly, dynamic collection-based management, interactive user actions (like favorites, sorting, filtering), and high-frequency content additions are much better served by a dedicated database.
 
-1. **Storage: SQLite via Turso**
-   - **Why**: Turso is an edge-replicated database based on SQLite. It is serverless, offers a generous free tier, has sub-millisecond edge read latency, and requires zero database connection pooling configuration. It integrates seamlessly with Astro via `@libsql/client`.
-2. **Frontend & Deployment: Astro (Hybrid Rendering) on Vercel**
-   - **Why**: Instead of fetching all 1,000 sites on every user request or bundling them in a single massive JS bundle (which would cause high hydration latency and high Time to Interactive), we use Astro's **Hybrid Rendering** (pre-rendering static layout, but loading site bookmarks progressively via API endpoints or dynamic pagination).
+This document outlines robust database architectures (SQL vs NoSQL), complete schemas, indexing strategies, seeding/migration procedures, and Astro server-side/client-side integration patterns to support 1,000+ bookmarks with high performance.
 
 ---
 
@@ -15,7 +12,7 @@ For **1,000+ sites** deployed on a modern frontend platform like **Vercel** with
 
 Depending on the deployment strategy and product requirements, three major options are recommended:
 
-### Option A: SQLite / Turso (The Absolute Best Choice)
+### Option A: SQLite / Turso (Highly Recommended)
 * **Why**: Turso is an edge-replicated database based on libsql (SQLite fork). It is extremely cost-effective, has a tiny memory footprint, and fits serverless/Astro environments perfectly via HTTP requests.
 * **Pros**: Simple schema, sub-millisecond edge read latency, local development using standard SQLite, easy database branching.
 * **Cons**: No native JSON column types (though SQLite provides JSON1 extension).
