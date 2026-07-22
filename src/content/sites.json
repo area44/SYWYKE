@@ -28,6 +28,13 @@
     "tags": ["explore"]
   },
   {
+    "id": "ai-canvas",
+    "title": "AI Canvas",
+    "url": "https://aicanvas.me/",
+    "description": "A registry of animated React components, blocks, and complete design systems you can install with one CLI command.",
+    "tags": ["ai", "components", "design", "develop", "opensource", "ui"]
+  },
+  {
     "id": "alison",
     "title": "Alison",
     "url": "https://alison.com",
@@ -47,6 +54,13 @@
     "url": "https://arc.tencent.com/en/ai-demos/imgRestor",
     "description": "Real-ESRGAN aims at developing Practical Algorithms for General Image/Video Restoration.",
     "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "beui",
+    "title": "beUI",
+    "url": "https://beui.dev/",
+    "description": "A dynamic motion toolkit for React and Next.js featuring free, open-source animated UI components built with Framer Motion and Tailwind CSS.",
+    "tags": ["components", "design", "develop", "opensource", "ui"]
   },
   {
     "id": "bigjpg",
@@ -154,6 +168,13 @@
     "tags": ["develop", "tool"]
   },
   {
+    "id": "creed",
+    "title": "Creed",
+    "url": "https://creed.md/home",
+    "description": "A personal context profile for your AI agents, allowing AI tools to understand who you are, what you build, and how you work via MCP.",
+    "tags": ["ai", "develop", "tool"]
+  },
+  {
     "id": "deepseek",
     "title": "deepseek",
     "url": "https://www.deepseek.com/en",
@@ -243,6 +264,13 @@
     "url": "https://git.io",
     "description": "Shorten url:  by GitHub.",
     "tags": ["develop", "tool"]
+  },
+  {
+    "id": "godsvg",
+    "title": "GodSVG",
+    "url": "https://godsvg.com/",
+    "description": "A structured SVG editor with low abstraction representing SVG code directly, producing clean, precise, and optimized vector files.",
+    "tags": ["design", "opensource", "tool"]
   },
   {
     "id": "gofile",
@@ -378,6 +406,20 @@
     "tags": ["develop", "ui", "design"]
   },
   {
+    "id": "name-that-ui",
+    "title": "Name That UI",
+    "url": "https://namethatui.com/",
+    "description": "The visual dictionary of UI. Describe any UI element and find its real name, API symbol, and design patterns.",
+    "tags": ["components", "design", "develop", "ui"]
+  },
+  {
+    "id": "native-sdk",
+    "title": "Native SDK",
+    "url": "https://native-sdk.dev/",
+    "description": "The complete toolkit for building lightweight, native desktop applications using Zig and declarative Native markup.",
+    "tags": ["develop", "opensource", "tool"]
+  },
+  {
     "id": "next-ai-chatbot",
     "title": "Next.js AI Chatbot",
     "url": "https://chat.vercel.ai/",
@@ -399,6 +441,20 @@
     "tags": ["develop", "tool", "opensource"]
   },
   {
+    "id": "opencode-ai",
+    "title": "OpenCode AI",
+    "url": "https://opencode.ai/",
+    "description": "An open-source agentic code editor and desktop powerhouse that brings agentic workflows with local and cloud models to your desktop.",
+    "tags": ["ai", "develop", "opensource", "tool"]
+  },
+  {
+    "id": "open-design-ai",
+    "title": "Open Design AI",
+    "url": "https://open-design.ai/",
+    "description": "AI-powered design tools and platforms to automate UI/UX design generation and design-to-code workflows.",
+    "tags": ["ai", "design", "tool"]
+  },
+  {
     "id": "open-source-agenda",
     "title": "Open Source Agenda (OSA)",
     "url": "https://www.opensourceagenda.com",
@@ -406,11 +462,32 @@
     "tags": ["opensource", "develop"]
   },
   {
+    "id": "orginkit",
+    "title": "OrginKit",
+    "url": "https://orginkit.dev",
+    "description": "A collection of modular, production-ready Tailwind CSS and React components and UI kits.",
+    "tags": ["components", "design", "develop", "ui"]
+  },
+  {
     "id": "padlet",
     "title": "Padlet",
     "url": "https://padlet.com",
     "description": "It’s a starry night. Make something stellar.",
     "tags": ["share"]
+  },
+  {
+    "id": "pages-cms",
+    "title": "Pages CMS",
+    "url": "https://pagescms.org/",
+    "description": "A simple, user-friendly CMS that manages content and media directly in your GitHub repository without a database or backend.",
+    "tags": ["develop", "opensource", "tool"]
+  },
+  {
+    "id": "pages-editor",
+    "title": "Pages Editor",
+    "url": "https://editor.pagescms.org/",
+    "description": "A simple, Notion-like WYSIWYG editor component for shadcn/ui, built with TipTap, ProseMirror, and React.",
+    "tags": ["components", "develop", "opensource", "tool", "ui"]
   },
   {
     "id": "pagespeed-insights",
@@ -504,6 +581,20 @@
     "tags": ["tool"]
   },
   {
+    "id": "reicon",
+    "title": "Reicon",
+    "url": "https://reicon.dev/",
+    "description": "A free, open-source SVG icon library featuring 2,700+ handcrafted, pixel-perfect icons in Outline and Filled weights.",
+    "tags": ["components", "design", "develop", "opensource", "ui"]
+  },
+  {
+    "id": "remocn",
+    "title": "Remocn",
+    "url": "https://remocn.dev/",
+    "description": "Production-ready Remotion animations, transitions, backgrounds, and animated icons installable with the shadcn CLI.",
+    "tags": ["components", "design", "develop", "opensource", "ui", "video"]
+  },
+  {
     "id": "respimagelint",
     "title": "RespImageLint",
     "url": "https://ausi.github.io/respimagelint",
@@ -516,6 +607,13 @@
     "url": "https://www.restorephotos.io",
     "description": "Restoring old photos using AI for everyone.",
     "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "reviet-design",
+    "title": "Reviet Design",
+    "url": "https://reviet.design",
+    "description": "A curated library of premium design resources, UI/UX templates, and assets for designers and developers.",
+    "tags": ["design", "explore", "ui"]
   },
   {
     "id": "rgadguard",
@@ -663,6 +761,13 @@
     "url": "https://ui.aceternity.com",
     "description": "Copy paste the most trending components and use them in your websites without having to worry about styling and animations.",
     "tags": ["develop", "design"]
+  },
+  {
+    "id": "uiverse",
+    "title": "Uiverse",
+    "url": "https://uiverse.io/",
+    "description": "The largest library of open-source UI elements. Community-built elements copyable as HTML/CSS, Tailwind, React, and Figma.",
+    "tags": ["components", "design", "develop", "opensource", "ui"]
   },
   {
     "id": "unsplash",
