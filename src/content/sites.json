@@ -4,7 +4,7 @@
     "title": "21st.dev",
     "url": "https://21st.dev",
     "description": "Discover, share, and craft UI components.",
-    "tags": ["ui", "components", "design", "develop"]
+    "tags": ["design", "develop", "ui"]
   },
   {
     "id": "750-words",
@@ -28,10 +28,17 @@
     "tags": ["explore"]
   },
   {
+    "id": "ai-canvas",
+    "title": "AI Canvas",
+    "url": "https://aicanvas.me/",
+    "description": "A registry of animated React components, blocks, and complete design systems you can install with one CLI command.",
+    "tags": ["ai", "design", "develop", "opensource", "ui"]
+  },
+  {
     "id": "alison",
     "title": "Alison",
     "url": "https://alison.com",
-    "description": "Free design Courses from the World’s Top Publishers.",
+    "description": "Free design Courses from the World\u2019s Top Publishers.",
     "tags": ["learn"]
   },
   {
@@ -39,7 +46,7 @@
     "title": "Animated Backgrounds",
     "url": "https://animatedbackgrounds.me",
     "description": "A Collection of 30+ animated backgrounds for websites and blogs.With Animated Backgrounds, set a simple, elegant background animations on your websites and blogs.",
-    "tags": ["design", "develop", "ui", "components"]
+    "tags": ["design", "develop", "ui"]
   },
   {
     "id": "arc-demo",
@@ -47,6 +54,13 @@
     "url": "https://arc.tencent.com/en/ai-demos/imgRestor",
     "description": "Real-ESRGAN aims at developing Practical Algorithms for General Image/Video Restoration.",
     "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "beui",
+    "title": "beUI",
+    "url": "https://beui.dev/",
+    "description": "A dynamic motion toolkit for React and Next.js featuring free, open-source animated UI components built with Framer Motion and Tailwind CSS.",
+    "tags": ["design", "develop", "opensource", "ui"]
   },
   {
     "id": "bigjpg",
@@ -115,7 +129,7 @@
     "id": "chatgpt",
     "title": "ChatGPT",
     "url": "https://chatgpt.com",
-    "description": "ChatGPT is a sibling model to InstructGPT⁠, which is trained to follow an instruction in a prompt and provide a detailed response.",
+    "description": "ChatGPT is a sibling model to InstructGPT\u2060, which is trained to follow an instruction in a prompt and provide a detailed response.",
     "tags": ["ai", "tool"]
   },
   {
@@ -152,6 +166,13 @@
     "url": "https://codebeautify.org",
     "description": "JSON Beautifier, XML Viewer, JSON Converters, Hex Converters and More.",
     "tags": ["develop", "tool"]
+  },
+  {
+    "id": "creed",
+    "title": "Creed",
+    "url": "https://creed.md/home",
+    "description": "A personal context profile for your AI agents, allowing AI tools to understand who you are, what you build, and how you work via MCP.",
+    "tags": ["ai", "develop", "tool"]
   },
   {
     "id": "deepseek",
@@ -245,6 +266,13 @@
     "tags": ["develop", "tool"]
   },
   {
+    "id": "godsvg",
+    "title": "GodSVG",
+    "url": "https://godsvg.com/",
+    "description": "A structured SVG editor with low abstraction representing SVG code directly, producing clean, precise, and optimized vector files.",
+    "tags": ["design", "opensource", "tool"]
+  },
+  {
     "id": "gofile",
     "title": "Gofile",
     "url": "https://gofile.io",
@@ -304,7 +332,7 @@
     "id": "imgur",
     "title": "Imgur",
     "url": "https://imgur.com",
-    "description": "Where you’ll find the funniest, most informative and inspiring images, memes, GIFs, and visual stories served up in an endless stream of bite-sized fun.",
+    "description": "Where you\u2019ll find the funniest, most informative and inspiring images, memes, GIFs, and visual stories served up in an endless stream of bite-sized fun.",
     "tags": ["explore", "photo"]
   },
   {
@@ -378,6 +406,20 @@
     "tags": ["develop", "ui", "design"]
   },
   {
+    "id": "name-that-ui",
+    "title": "Name That UI",
+    "url": "https://namethatui.com/",
+    "description": "The visual dictionary of UI. Describe any UI element and find its real name, API symbol, and design patterns.",
+    "tags": ["design", "develop", "ui"]
+  },
+  {
+    "id": "native-sdk",
+    "title": "Native SDK",
+    "url": "https://native-sdk.dev/",
+    "description": "The complete toolkit for building lightweight, native desktop applications using Zig and declarative Native markup.",
+    "tags": ["develop", "opensource", "tool"]
+  },
+  {
     "id": "next-ai-chatbot",
     "title": "Next.js AI Chatbot",
     "url": "https://chat.vercel.ai/",
@@ -399,6 +441,20 @@
     "tags": ["develop", "tool", "opensource"]
   },
   {
+    "id": "opencode-ai",
+    "title": "OpenCode AI",
+    "url": "https://opencode.ai/",
+    "description": "An open-source agentic code editor and desktop powerhouse that brings agentic workflows with local and cloud models to your desktop.",
+    "tags": ["ai", "develop", "opensource", "tool"]
+  },
+  {
+    "id": "open-design-ai",
+    "title": "Open Design AI",
+    "url": "https://open-design.ai/",
+    "description": "AI-powered design tools and platforms to automate UI/UX design generation and design-to-code workflows.",
+    "tags": ["ai", "design", "tool"]
+  },
+  {
     "id": "open-source-agenda",
     "title": "Open Source Agenda (OSA)",
     "url": "https://www.opensourceagenda.com",
@@ -406,11 +462,32 @@
     "tags": ["opensource", "develop"]
   },
   {
+    "id": "orginkit",
+    "title": "OrginKit",
+    "url": "https://orginkit.dev",
+    "description": "A collection of modular, production-ready Tailwind CSS and React components and UI kits.",
+    "tags": ["design", "develop", "ui"]
+  },
+  {
     "id": "padlet",
     "title": "Padlet",
     "url": "https://padlet.com",
-    "description": "It’s a starry night. Make something stellar.",
+    "description": "It\u2019s a starry night. Make something stellar.",
     "tags": ["share"]
+  },
+  {
+    "id": "pages-cms",
+    "title": "Pages CMS",
+    "url": "https://pagescms.org/",
+    "description": "A simple, user-friendly CMS that manages content and media directly in your GitHub repository without a database or backend.",
+    "tags": ["develop", "opensource", "tool"]
+  },
+  {
+    "id": "pages-editor",
+    "title": "Pages Editor",
+    "url": "https://editor.pagescms.org/",
+    "description": "A simple, Notion-like WYSIWYG editor component for shadcn/ui, built with TipTap, ProseMirror, and React.",
+    "tags": ["develop", "opensource", "tool", "ui"]
   },
   {
     "id": "pagespeed-insights",
@@ -504,6 +581,20 @@
     "tags": ["tool"]
   },
   {
+    "id": "reicon",
+    "title": "Reicon",
+    "url": "https://reicon.dev/",
+    "description": "A free, open-source SVG icon library featuring 2,700+ handcrafted, pixel-perfect icons in Outline and Filled weights.",
+    "tags": ["design", "develop", "opensource", "ui"]
+  },
+  {
+    "id": "remocn",
+    "title": "Remocn",
+    "url": "https://remocn.dev/",
+    "description": "Production-ready Remotion animations, transitions, backgrounds, and animated icons installable with the shadcn CLI.",
+    "tags": ["design", "develop", "opensource", "ui", "video"]
+  },
+  {
     "id": "respimagelint",
     "title": "RespImageLint",
     "url": "https://ausi.github.io/respimagelint",
@@ -518,10 +609,17 @@
     "tags": ["ai", "photo", "tool"]
   },
   {
+    "id": "reviet-design",
+    "title": "Reviet Design",
+    "url": "https://reviet.design",
+    "description": "A curated library of premium design resources, UI/UX templates, and assets for designers and developers.",
+    "tags": ["design", "explore", "ui"]
+  },
+  {
     "id": "rgadguard",
-    "title": "List of files by Microsoft®",
+    "title": "List of files by Microsoft\u00ae",
     "url": "https://files.rg-adguard.net",
-    "description": "List of files by Microsoft®.",
+    "description": "List of files by Microsoft\u00ae.",
     "tags": ["download"]
   },
   {
@@ -564,14 +662,14 @@
     "title": "shadcn/ui",
     "url": "https://ui.shadcn.com",
     "description": "Build your component library.",
-    "tags": ["design", "develop", "opensource", "ui", "components"]
+    "tags": ["design", "develop", "opensource", "ui"]
   },
   {
     "id": "skiper-ui",
     "title": "skiper/ui",
     "url": "https://skiper-ui.com",
     "description": "Components crafted for Modern Websites.",
-    "tags": ["design", "develop", "ui", "components"]
+    "tags": ["design", "develop", "ui"]
   },
   {
     "id": "slidesgo",
@@ -613,7 +711,7 @@
     "title": "Tailus",
     "url": "https://tailus.io",
     "description": "Build Customized modern Web UI.",
-    "tags": ["design", "develop", "opensource", "ui", "components"]
+    "tags": ["design", "develop", "opensource", "ui"]
   },
   {
     "id": "tarot-with-youtube",
@@ -665,6 +763,13 @@
     "tags": ["develop", "design"]
   },
   {
+    "id": "uiverse",
+    "title": "Uiverse",
+    "url": "https://uiverse.io/",
+    "description": "The largest library of open-source UI elements. Community-built elements copyable as HTML/CSS, Tailwind, React, and Figma.",
+    "tags": ["design", "develop", "opensource", "ui"]
+  },
+  {
     "id": "unsplash",
     "title": "Unsplash",
     "url": "https://unsplash.com",
@@ -675,7 +780,7 @@
     "id": "vecel-og-playground",
     "title": "Vercel OG Image Playground",
     "url": "https://og-playground.vercel.app",
-    "description": "Generate Open Graph images with Vercel’s Edge Function.",
+    "description": "Generate Open Graph images with Vercel\u2019s Edge Function.",
     "tags": ["develop", "tool", "opensource"]
   },
   {

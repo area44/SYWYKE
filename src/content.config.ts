@@ -3,7 +3,6 @@ import { file } from "astro/loaders";
 
 export const VALID_TAGS = [
   "ai",
-  "components",
   "design",
   "develop",
   "download",
