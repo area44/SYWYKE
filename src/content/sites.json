@@ -350,6 +350,13 @@
     "tags": ["design", "video", "tool"]
   },
   {
+    "id": "j2team-free",
+    "title": "J2TEAM Free Tools",
+    "url": "https://j2team.org/free",
+    "description": "A collection of powerful free tools for developers, designers, and everyday users with no registration required.",
+    "tags": ["design", "develop", "tool"]
+  },
+  {
     "id": "jitter",
     "title": "Jitter",
     "url": "https://jitter.video",
@@ -572,6 +579,13 @@
     "url": "https://readable.com",
     "description": "Readable will quickly test the readability, spelling and grammar of your text and show you how and where to make improvements.",
     "tags": ["language", "tool"]
+  },
+  {
+    "id": "recent-design",
+    "title": "Recent.Design",
+    "url": "https://recent.design/",
+    "description": "A curated platform showcasing the latest trends in web, interface, and interaction design for design inspiration.",
+    "tags": ["design", "explore", "ui"]
   },
   {
     "id": "reduced-to",
