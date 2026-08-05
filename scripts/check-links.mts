@@ -74,14 +74,14 @@ async function fetchWithTimeout(
         | { code?: string; errno?: string }
         | undefined;
       const causeCode = cause?.code || cause?.errno;
-      if (
-        causeCode === "ENOTFOUND" ||
-        causeCode === "EAI_AGAIN" ||
-        error.message.includes("ENOTFOUND") ||
-        error.message.includes("EAI_AGAIN")
-      ) {
+      if (causeCode === "ENOTFOUND" || error.message.includes("ENOTFOUND")) {
         isDnsError = true;
         errorMsg = `DNS lookup failed (${causeCode || "ENOTFOUND"})`;
+      } else if (
+        causeCode === "EAI_AGAIN" ||
+        error.message.includes("EAI_AGAIN")
+      ) {
+        errorMsg = `Temporary DNS lookup failed (${causeCode || "EAI_AGAIN"})`;
       }
     }
 
