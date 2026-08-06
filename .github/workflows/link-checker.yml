@@ -1,16 +1,17 @@
-name: Dead Link Checker
+name: Link Checker
 
 on:
   push:
     branches: ["main"]
   pull_request:
   schedule:
-    # Run daily at midnight UTC
-    - cron: "0 0 * * *"
+    # Run weekly on Sunday at midnight UTC
+    - cron: "0 0 * * 0"
   workflow_dispatch: # Allows manual run
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   link-checker:
@@ -33,5 +34,29 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run link checker
+      - name: Run link checker (validate only)
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
         run: pnpm run check-links
+
+      - name: Run link checker and fix dead links
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: pnpm run check-links --write
+
+      - name: Create Pull Request for Dead Links Clean-up
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: automatically remove dead links from sites.json"
+          committer: GitHub <noreply@github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          signoff: false
+          branch: chore/remove-dead-links
+          delete-branch: true
+          title: "chore: automatically remove dead links from sites.json"
+          body: |
+            This PR was automatically created by the weekly Link Checker workflow.
+            It filters out dead links detected during the validation process.
+          labels: |
+            chore
+            automated-pr
