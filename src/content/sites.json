@@ -38,7 +38,7 @@
     "id": "alison",
     "title": "Alison",
     "url": "https://alison.com",
-    "description": "Free design Courses from the World\u2019s Top Publishers.",
+    "description": "Free design Courses from the World’s Top Publishers.",
     "tags": ["learn"]
   },
   {
@@ -129,7 +129,7 @@
     "id": "chatgpt",
     "title": "ChatGPT",
     "url": "https://chatgpt.com",
-    "description": "ChatGPT is a sibling model to InstructGPT\u2060, which is trained to follow an instruction in a prompt and provide a detailed response.",
+    "description": "ChatGPT is a sibling model to InstructGPT⁠, which is trained to follow an instruction in a prompt and provide a detailed response.",
     "tags": ["ai", "tool"]
   },
   {
@@ -332,15 +332,8 @@
     "id": "imgur",
     "title": "Imgur",
     "url": "https://imgur.com",
-    "description": "Where you\u2019ll find the funniest, most informative and inspiring images, memes, GIFs, and visual stories served up in an endless stream of bite-sized fun.",
+    "description": "Where you’ll find the funniest, most informative and inspiring images, memes, GIFs, and visual stories served up in an endless stream of bite-sized fun.",
     "tags": ["explore", "photo"]
-  },
-  {
-    "id": "inpainting",
-    "title": "Inpainting",
-    "url": "https://inpainter.vercel.app",
-    "description": "Inpainting is a process where missing parts of an artwork are filled in to present a complete image.",
-    "tags": ["ai", "photo", "tool"]
   },
   {
     "id": "introcave",
@@ -427,13 +420,6 @@
     "tags": ["develop", "opensource", "tool"]
   },
   {
-    "id": "next-ai-chatbot",
-    "title": "Next.js AI Chatbot",
-    "url": "https://chat.vercel.ai/",
-    "description": "This is an open source AI chatbot app template built with Next.js, the Vercel AI SDK, and Vercel KV.",
-    "tags": ["ai", "tool"]
-  },
-  {
     "id": "novel",
     "title": "Novel",
     "url": "https://novel.sh",
@@ -469,17 +455,10 @@
     "tags": ["opensource", "develop"]
   },
   {
-    "id": "orginkit",
-    "title": "OrginKit",
-    "url": "https://orginkit.dev",
-    "description": "A collection of modular, production-ready Tailwind CSS and React components and UI kits.",
-    "tags": ["design", "develop", "ui"]
-  },
-  {
     "id": "padlet",
     "title": "Padlet",
     "url": "https://padlet.com",
-    "description": "It\u2019s a starry night. Make something stellar.",
+    "description": "It’s a starry night. Make something stellar.",
     "tags": ["share"]
   },
   {
@@ -502,13 +481,6 @@
     "url": "https://pagespeed.web.dev",
     "description": "PageSpeed Insights (PSI) reports on the user experience of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.",
     "tags": ["develop", "tool"]
-  },
-  {
-    "id": "paint-by-text",
-    "title": "Paint by Text",
-    "url": "https://paintbytext.chat",
-    "description": "Edit your photos using written instructions, with the help of an AI.",
-    "tags": ["ai", "photo", "tool"]
   },
   {
     "id": "pdf-archive",
@@ -588,13 +560,6 @@
     "tags": ["design", "explore", "ui"]
   },
   {
-    "id": "reduced-to",
-    "title": "Reduced.to",
-    "url": "https://reduced.to",
-    "description": "Add your very long URL in the input below and click on the button to make it shorter.",
-    "tags": ["tool"]
-  },
-  {
     "id": "reicon",
     "title": "Reicon",
     "url": "https://reicon.dev/",
@@ -623,17 +588,10 @@
     "tags": ["ai", "photo", "tool"]
   },
   {
-    "id": "reviet-design",
-    "title": "Reviet Design",
-    "url": "https://reviet.design",
-    "description": "A curated library of premium design resources, UI/UX templates, and assets for designers and developers.",
-    "tags": ["design", "explore", "ui"]
-  },
-  {
     "id": "rgadguard",
-    "title": "List of files by Microsoft\u00ae",
+    "title": "List of files by Microsoft®",
     "url": "https://files.rg-adguard.net",
-    "description": "List of files by Microsoft\u00ae.",
+    "description": "List of files by Microsoft®.",
     "tags": ["download"]
   },
   {
@@ -655,13 +613,6 @@
     "title": "Sentence dictionary design",
     "url": "https://sentencedict.com",
     "description": "Good sentence examples for every word.",
-    "tags": ["language", "tool"]
-  },
-  {
-    "id": "sentence-stack",
-    "title": "Sentence Stack",
-    "url": "https://sentencestack.com",
-    "description": "Improve your English with our linguistic search engine backed by 300+ million sentences.",
     "tags": ["language", "tool"]
   },
   {
@@ -794,15 +745,8 @@
     "id": "vecel-og-playground",
     "title": "Vercel OG Image Playground",
     "url": "https://og-playground.vercel.app",
-    "description": "Generate Open Graph images with Vercel\u2019s Edge Function.",
+    "description": "Generate Open Graph images with Vercel’s Edge Function.",
     "tags": ["develop", "tool", "opensource"]
-  },
-  {
-    "id": "vscheatsheet",
-    "title": "VSCheatsheet",
-    "url": "https://www.vscheatsheet.com",
-    "description": "Shortcuts in the shortest time possible.",
-    "tags": ["tool"]
   },
   {
     "id": "windstatic",
@@ -831,20 +775,6 @@
     "url": "https://images.weserv.nl",
     "description": "An image cache & resize service.",
     "tags": ["photo", "develop", "tool"]
-  },
-  {
-    "id": "y2mate",
-    "title": "Y2mate",
-    "url": "https://www.y2mate.com",
-    "description": "Download Video and Audio from YouTube.",
-    "tags": ["download", "tool"]
-  },
-  {
-    "id": "yify-movies",
-    "title": "YIFY movies",
-    "url": "https://yts.mx",
-    "description": "Movies Torrent Download.",
-    "tags": ["download", "tool"]
   },
   {
     "id": "yopmail",
