@@ -12,7 +12,7 @@
     "format": "biome format --write",
     "lint": "biome lint --write",
     "check": "biome check --write",
-    "check-links": "node scripts/check-links.mjs"
+    "check-links": "node --experimental-strip-types scripts/check-links.mts"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",

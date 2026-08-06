@@ -7,9 +7,36 @@ const TIMEOUT_MS = 10000; // 10 seconds
 const CONCURRENCY = 10;
 const RETRY_DELAY_MS = 1500;
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+interface Site {
+  id: string;
+  title: string;
+  url: string;
+  description: string;
+  tags: string[];
+}
 
-async function fetchWithTimeout(url, method) {
+type LinkStatus = "ALIVE" | "DEAD" | "UNREACHABLE";
+
+interface CheckResult {
+  site: Site;
+  status: LinkStatus;
+  httpStatus?: number;
+  error?: string;
+  methodUsed: "HEAD" | "GET";
+  retries: number;
+}
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchWithTimeout(
+  url: string,
+  method: "HEAD" | "GET"
+): Promise<{
+  success: boolean;
+  status?: number;
+  error?: string;
+  isDnsError?: boolean;
+}> {
   try {
     const response = await fetch(url, {
       method,
@@ -30,7 +57,7 @@ async function fetchWithTimeout(url, method) {
       status: response.status,
       error: `Status ${response.status} (${response.statusText})`,
     };
-  } catch (error) {
+  } catch (error: unknown) {
     let errorMsg = "Unknown error";
     let isDnsError = false;
 
@@ -42,7 +69,9 @@ async function fetchWithTimeout(url, method) {
       }
 
       // Check Node's native fetch (undici) DNS errors safely
-      const cause = error.cause;
+      const cause = error.cause as
+        | { code?: string; errno?: string }
+        | undefined;
       const causeCode = cause?.code || cause?.errno;
       if (causeCode === "ENOTFOUND" || error.message.includes("ENOTFOUND")) {
         isDnsError = true;
@@ -59,14 +88,20 @@ async function fetchWithTimeout(url, method) {
   }
 }
 
-async function checkLink(site) {
+async function checkLink(site: Site): Promise<CheckResult> {
   const url = site.url;
   let retries = 0;
 
-  const attemptCheck = async () => {
+  const attemptCheck = async (): Promise<{
+    success: boolean;
+    httpStatus?: number;
+    error?: string;
+    isDnsError?: boolean;
+    methodUsed: "HEAD" | "GET";
+  }> => {
     // 1. Try HEAD first
     let res = await fetchWithTimeout(url, "HEAD");
-    let methodUsed = "HEAD";
+    let methodUsed: "HEAD" | "GET" = "HEAD";
 
     // 2. Fallback to GET if HEAD failed
     if (!res.success) {
@@ -98,7 +133,7 @@ async function checkLink(site) {
   }
 
   // Categorize result
-  let status = "ALIVE";
+  let status: LinkStatus = "ALIVE";
   if (!check.success) {
     if (
       check.httpStatus === 404 ||
@@ -124,12 +159,12 @@ async function checkLink(site) {
 async function main() {
   console.log("Starting dead link check...");
   const sitesPath = join(process.cwd(), "src/content/sites.json");
-  let sites = [];
+  let sites: Site[] = [];
 
   try {
     const rawData = readFileSync(sitesPath, "utf-8");
     sites = JSON.parse(rawData);
-  } catch (err) {
+  } catch (err: unknown) {
     const errorMessage = err instanceof Error ? err.message : String(err);
     console.error("Failed to read/parse sites.json:", errorMessage);
     process.exit(1);
@@ -137,7 +172,7 @@ async function main() {
 
   console.log(`Found ${sites.length} sites to check.`);
 
-  const results = [];
+  const results: CheckResult[] = [];
   let activeIndex = 0;
 
   async function worker() {
@@ -167,7 +202,7 @@ async function main() {
     }
   }
 
-  const workers = [];
+  const workers: Promise<void>[] = [];
   const limit = Math.min(CONCURRENCY, sites.length);
   for (let i = 0; i < limit; i++) {
     workers.push(worker());
@@ -211,9 +246,11 @@ async function main() {
         console.log(
           `Filtered sites written successfully. (Removed ${dead.length} dead links).`
         );
-        process.exit(0); // exit 0 because they are handled
-      } catch (writeErr) {
-        console.error("Failed to write updated sites.json:", writeErr.message);
+        process.exit(0);
+      } catch (writeErr: unknown) {
+        const writeErrMessage =
+          writeErr instanceof Error ? writeErr.message : String(writeErr);
+        console.error("Failed to write updated sites.json:", writeErrMessage);
         process.exit(1);
       }
     } else {
@@ -225,7 +262,7 @@ async function main() {
   }
 }
 
-main().catch((err) => {
+main().catch((err: unknown) => {
   console.error("An unexpected error occurred during link check:", err);
   process.exit(1);
 });
