@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",
-    "@base-ui/react": "^1.6.0",
+    "@base-ui/react": "^1.7.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.1.6",
     "class-variance-authority": "^0.7.1",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@area44/biome-config": "^2.3.4",
-    "@biomejs/biome": "^2.5.6",
+    "@biomejs/biome": "^2.5.7",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
