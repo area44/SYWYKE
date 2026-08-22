@@ -34,25 +34,13 @@ const ogImage = new URL("og-image.png", siteUrl).toString();
 
   <link
     rel="icon"
+    type="image/svg+xml"
+    href={new URL("favicon.svg", siteUrl).toString()}
+  />
+  <link
+    rel="icon"
     href={new URL("favicon.ico", siteUrl).toString()}
     sizes="any"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href={new URL("favicon-16x16.png", siteUrl).toString()}
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href={new URL("favicon-32x32.png", siteUrl).toString()}
-  />
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href={new URL("apple-touch-icon.png", siteUrl).toString()}
   />
   <link rel="manifest" href={new URL("site.webmanifest", siteUrl).toString()} />
   <meta name="theme-color" content="#ffffff" />
