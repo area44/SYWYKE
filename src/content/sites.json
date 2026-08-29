@@ -7,6 +7,13 @@
     "tags": ["design", "develop", "ui"]
   },
   {
+    "id": "404s-design",
+    "title": "404s",
+    "url": "https://www.404s.design/",
+    "description": "A curated gallery of creative and well-designed 404 pages worth finding.",
+    "tags": ["design", "explore", "ui"]
+  },
+  {
     "id": "750-words",
     "title": "750 Words",
     "url": "https://www.750words.com",
@@ -168,6 +175,13 @@
     "tags": ["ai", "develop", "tool"]
   },
   {
+    "id": "curated-design",
+    "title": "Curated",
+    "url": "https://curated.design/",
+    "description": "A handpicked gallery of inspiring web design, sections, and templates.",
+    "tags": ["design", "explore", "ui"]
+  },
+  {
     "id": "deepseek",
     "title": "deepseek",
     "url": "https://www.deepseek.com/en",
@@ -308,6 +322,13 @@
     "tags": ["ai", "design", "photo", "tool"]
   },
   {
+    "id": "hugeicons",
+    "title": "Hugeicons",
+    "url": "https://hugeicons.com/",
+    "description": "A library of 60,000+ customizable icons designed to make UI look beautiful and polished.",
+    "tags": ["design", "develop", "ui"]
+  },
+  {
     "id": "i2ocr",
     "title": "i2OCR",
     "url": "https://www.i2ocr.com",
@@ -362,6 +383,41 @@
     "url": "https://www.krea.ai",
     "description": "Create an AI with your own style.",
     "tags": ["ai", "photo", "tool"]
+  },
+  {
+    "id": "landing-love",
+    "title": "Landing Love",
+    "url": "https://www.landing.love/",
+    "description": "A showcase of animation and web design inspiration with full-page video recordings.",
+    "tags": ["design", "explore", "ui"]
+  },
+  {
+    "id": "logggos",
+    "title": "Logggos",
+    "url": "https://www.logggos.club/",
+    "description": "A curated catalog of well-designed logos sorted by industry, theme, typography, and color.",
+    "tags": ["design", "explore"]
+  },
+  {
+    "id": "logobook",
+    "title": "Logobook",
+    "url": "https://logobook.com/",
+    "description": "A gallery discovering fine logos, symbols, and trademarks from around the world.",
+    "tags": ["design", "explore"]
+  },
+  {
+    "id": "logoinspo",
+    "title": "LogoInspo",
+    "url": "https://logoinspo.com/",
+    "description": "Curated logo and brand design inspiration library searchable by style, industry, and color.",
+    "tags": ["design", "explore"]
+  },
+  {
+    "id": "logosystem",
+    "title": "Logosystem",
+    "url": "https://logosystem.co/",
+    "description": "A free logo inspiration library featuring curated logos, wordmarks, symbols, and animated logos.",
+    "tags": ["design", "explore"]
   },
   {
     "id": "lovable",
@@ -427,13 +483,6 @@
     "tags": ["develop", "tool", "opensource"]
   },
   {
-    "id": "opencode-ai",
-    "title": "OpenCode AI",
-    "url": "https://opencode.ai/",
-    "description": "An open-source agentic code editor and desktop powerhouse that brings agentic workflows with local and cloud models to your desktop.",
-    "tags": ["ai", "develop", "opensource", "tool"]
-  },
-  {
     "id": "open-design-ai",
     "title": "Open Design AI",
     "url": "https://open-design.ai/",
@@ -446,6 +495,13 @@
     "url": "https://www.opensourceagenda.com",
     "description": "Discover the best free open source software projects.",
     "tags": ["opensource", "develop"]
+  },
+  {
+    "id": "opencode-ai",
+    "title": "OpenCode AI",
+    "url": "https://opencode.ai/",
+    "description": "An open-source agentic code editor and desktop powerhouse that brings agentic workflows with local and cloud models to your desktop.",
+    "tags": ["ai", "develop", "opensource", "tool"]
   },
   {
     "id": "padlet",
@@ -665,6 +721,13 @@
     "tags": ["photo", "develop", "tool"]
   },
   {
+    "id": "svgl",
+    "title": "svgl",
+    "url": "https://svgl.app/",
+    "description": "A beautiful SVG logos library for developers and designers.",
+    "tags": ["design", "develop", "opensource", "tool"]
+  },
+  {
     "id": "tailus",
     "title": "Tailus",
     "url": "https://tailus.io",
@@ -693,11 +756,25 @@
     "tags": ["develop", "tool", "ai"]
   },
   {
+    "id": "the-internet-designs",
+    "title": "The Internet Designs",
+    "url": "https://www.theinternetdesigns.com/",
+    "description": "Curated web, interface, and mobile app design inspiration from around the web.",
+    "tags": ["design", "explore", "ui"]
+  },
+  {
     "id": "the-stocks",
     "title": "The Stocks",
     "url": "https://thestocks.im",
     "description": "Best royalty free photos, videos, mockups, icons and fonts.",
     "tags": ["download", "photo", "video", "develop"]
+  },
+  {
+    "id": "toolfolio",
+    "title": "Toolfolio",
+    "url": "https://toolfolio.com/",
+    "description": "A tool discovery platform and directory curating software, resources, and design tools.",
+    "tags": ["design", "develop", "tool"]
   },
   {
     "id": "transfer",
