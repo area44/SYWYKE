@@ -168,13 +168,6 @@
     "tags": ["develop", "tool"]
   },
   {
-    "id": "creed",
-    "title": "Creed",
-    "url": "https://creed.md/home",
-    "description": "A personal context profile for your AI agents, allowing AI tools to understand who you are, what you build, and how you work via MCP.",
-    "tags": ["ai", "develop", "tool"]
-  },
-  {
     "id": "curated-design",
     "title": "Curated",
     "url": "https://curated.design/",
