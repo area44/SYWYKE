@@ -1,5 +1,6 @@
 packages:
   - '.'
+autoDedupe: true
 allowBuilds:
   esbuild: false
   msw: false
