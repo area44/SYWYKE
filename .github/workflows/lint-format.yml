@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Run lint and format
-        uses: area44/workflows/lint-format@845ea5a9b90f28362fc4252861a1bc108872e080 # v6.2.1
+        uses: area44/workflows/lint-format@f4c34d68843256954194209a0a247c2213e5c397 # v7.0.0
