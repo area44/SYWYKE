@@ -36,7 +36,7 @@ importers:
         specifier: ^19.3.1
         version: 19.3.1(react@19.3.1)
       shadcn:
-        specifier: ^4.21.5
+        specifier: ^4.22.0
         version: 4.22.0
       sharp:
         specifier: ^0.35.5
