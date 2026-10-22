@@ -27,7 +27,6 @@ SYWYKE is an open-source project that aims to gather and showcase awesome websit
 ## Getting Started
 
 To run SYWYKE locally, follow these steps:
-
 1. Clone the repository: `git clone https://github.com/AREA44/SYWYKE.git`
 2. Navigate to the project directory: `cd SYWYKE`
 3. Install dependencies: `pnpm install`
@@ -37,7 +36,6 @@ To run SYWYKE locally, follow these steps:
 ## Contributing
 
 If you would like to contribute to SYWYKE, feel free to follow these steps:
-
 1. Fork the repository on GitHub.
 2. Create a new branch for your feature or bug fix.
 3. Make the necessary changes and commit your changes.
@@ -51,6 +49,5 @@ SYWYKE is licensed under the MIT License.
 ## Credits
 
 We build upon the knowledge and success of these pioneers. Here are a few Open Source projects that have inspired us along the way.
-
 - [shadcn/ui](https://ui.shadcn.com)
 - [Square UI](https://square.lndev.me)

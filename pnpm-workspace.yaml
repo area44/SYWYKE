@@ -1,5 +1,5 @@
 packages:
-  - '.'
+  - "."
 autoDedupe: true
 allowBuilds:
   esbuild: false
