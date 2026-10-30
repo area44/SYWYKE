@@ -20,7 +20,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/setup@84cb39b217b10273981911c288cd62326dc7c6d2
         with:
-          run_install: true
+          install: true
 
       - name: Run link checker and fix dead links
         run: pnpm run check-links --write
